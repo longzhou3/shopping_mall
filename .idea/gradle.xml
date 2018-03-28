@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="createEmptyContentRootDirectories" value="true" />
+        <option name="distributionType" value="LOCAL" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="F:/JDK/gradle-4.1" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/shoppingmall-activity-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-after-sale-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-api" />
+            <option value="$PROJECT_DIR$/shoppingmall-config" />
+            <option value="$PROJECT_DIR$/shoppingmall-dao" />
+            <option value="$PROJECT_DIR$/shoppingmall-encrypt-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-login-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-order-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-pay-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-registration-center" />
+            <option value="$PROJECT_DIR$/shoppingmall-registration-center-three" />
+            <option value="$PROJECT_DIR$/shoppingmall-registration-center-twin" />
+            <option value="$PROJECT_DIR$/shoppingmall-ribbon" />
+            <option value="$PROJECT_DIR$/shoppingmall-seek-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-tools" />
+            <option value="$PROJECT_DIR$/shoppingmall-trolley-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-zuul" />
+            <option value="$PROJECT_DIR$/shoppingmall_test" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useAutoImport" value="true" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

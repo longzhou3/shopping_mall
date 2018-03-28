@@ -1,0 +1,12 @@
+apply plugin: 'war'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+dependencies {
+    compile project(":shoppingmall-api")
+    //Eureka调用者依赖
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
+    // https://mvnrepository.com/artifact/com.netflix.ribbon/ribbon-core
+    compile group: 'com.netflix.ribbon', name: 'ribbon-core', version: '2.2.0'
+    // https://mvnrepository.com/artifact/com.netflix.ribbon/ribbon-httpclient
+    compile group: 'com.netflix.ribbon', name: 'ribbon-httpclient', version: '2.2.0'
+}
