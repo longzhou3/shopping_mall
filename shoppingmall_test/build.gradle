@@ -1,4 +1,5 @@
 dependencies {
+    compile project(":shoppingmall-tools")
     compile project(":shoppingmall-api")
     compile project(":shoppingmall-dao")
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix'

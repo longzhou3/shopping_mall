@@ -1,10 +1,7 @@
 package com.zhkj.config;
 
-import com.zhkj.api.DataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  *用于读取远程仓库的配置

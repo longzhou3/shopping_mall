@@ -1,4 +1,4 @@
-package com.zhkj.api;
+package com.zhkj.dto.test;
 
 /**
  * 测试类  用于返回值 可删除

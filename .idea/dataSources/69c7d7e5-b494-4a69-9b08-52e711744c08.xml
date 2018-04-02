@@ -11,7 +11,7 @@
     <schema id="6" parent="1" name="questionnaire"/>
     <schema id="7" parent="1" name="student"/>
     <schema id="8" parent="1" name="sys"/>
-    <schema id="9" parent="1" name="shopping_mall">
+    <schema id="9" parent="1" name="shoppingmall">
       <Visible>1</Visible>
     </schema>
     <table id="10" parent="9" name="authentication"/>
@@ -390,26 +390,31 @@
       <Comment>登录名称</Comment>
       <DataType>varchar(20)|0</DataType>
     </column>
-    <column id="93" parent="20" name="headPortraitUrl">
+    <column id="93" parent="20" name="logingPassword">
       <Position>4</Position>
+      <Comment>登录密码</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="94" parent="20" name="headPortraitUrl">
+      <Position>5</Position>
       <Comment>头像路径</Comment>
       <DataType>varchar(100)|0</DataType>
     </column>
-    <column id="94" parent="20" name="userTypeId">
-      <Position>5</Position>
+    <column id="95" parent="20" name="userTypeId">
+      <Position>6</Position>
       <Comment>用户账号类型</Comment>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="95" parent="20" name="a_id">
-      <Position>6</Position>
+    <column id="96" parent="20" name="authenticationId">
+      <Position>7</Position>
       <Comment>实名认证id_外键</Comment>
       <DataType>int(11)|0</DataType>
     </column>
-    <index id="96" parent="20" name="id">
+    <index id="97" parent="20" name="id">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="97" parent="20" name="id">
+    <key id="98" parent="20" name="id">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
