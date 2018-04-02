@@ -8,6 +8,8 @@ import java.util.List;
  * 订单模块参数对象
  */
 public class Order_Vo<T> {
+    //总价
+    private double price;
     //密文对象
     private Encrypt_Returning encrypt_returning;
     //商品呢数据集合
@@ -29,4 +31,11 @@ public class Order_Vo<T> {
         this.list = list;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }

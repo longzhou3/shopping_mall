@@ -8,6 +8,8 @@ import java.util.List;
  * 订单模块返回值对象
  */
 public class Order_Dto<T> {
+    //总价
+    private double price;
     //状态
     private int status;
     //商品呢数据集合
@@ -38,5 +40,13 @@ public class Order_Dto<T> {
 
     public void setList(List<T> list) {
         this.list = list;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

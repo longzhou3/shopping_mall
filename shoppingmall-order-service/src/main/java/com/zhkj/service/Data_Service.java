@@ -29,6 +29,7 @@ public class Data_Service implements Data_Api {
         if (boolean_Enctypt) {
             Order_Dto order_dto = new Order_Dto();
             order_dto.setList(order_vo.getList());
+            order_dto.setPrice(order_vo.getPrice());
             order_dto.setStatus(1);
             order_dto.setEncrypt_returning(order_vo.getEncrypt_returning());
             return order_dto;
