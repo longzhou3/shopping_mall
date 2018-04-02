@@ -1,7 +1,7 @@
 package com.zhkj.entity;
 
 /**
- * 购物车表实体类
+ * Created by lenovo on 2018/4/2.
  */
 public class ShoppingcartEntity {
     private int id;
@@ -50,5 +50,31 @@ public class ShoppingcartEntity {
         this.userId = userId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        ShoppingcartEntity that = (ShoppingcartEntity) o;
+
+        if (id != that.id) return false;
+        if (commdityNumber != null ? !commdityNumber.equals(that.commdityNumber) : that.commdityNumber != null)
+            return false;
+        if (commdityPrice != null ? !commdityPrice.equals(that.commdityPrice) : that.commdityPrice != null)
+            return false;
+        if (commdityId != null ? !commdityId.equals(that.commdityId) : that.commdityId != null) return false;
+        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (commdityNumber != null ? commdityNumber.hashCode() : 0);
+        result = 31 * result + (commdityPrice != null ? commdityPrice.hashCode() : 0);
+        result = 31 * result + (commdityId != null ? commdityId.hashCode() : 0);
+        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+        return result;
+    }
 }

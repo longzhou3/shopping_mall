@@ -1,7 +1,7 @@
 package com.zhkj.entity;
 
 /**
- * 类型表实体类
+ * Created by lenovo on 2018/4/2.
  */
 public class TypeEntity {
     private int id;
@@ -23,5 +23,23 @@ public class TypeEntity {
         this.typeName = typeName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        TypeEntity that = (TypeEntity) o;
+
+        if (id != that.id) return false;
+        if (typeName != null ? !typeName.equals(that.typeName) : that.typeName != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (typeName != null ? typeName.hashCode() : 0);
+        return result;
+    }
 }

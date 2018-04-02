@@ -1,0 +1,31 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhkj.mapper.HarvestAddressMapper">
+    <resultMap id="harvestAddressResultMap" type="com.zhkj.entity.HarvestaddressEntity">
+        <id property="id" column="id" />
+        <result property="harvestAddressName" column="harvestAddressName"/>
+        <result property="harvestIsDefault" column="harvestIsDefault" />
+        <result property="typeId" column="typeId" />
+        <result property="userId" column="userId" />
+    </resultMap>
+    <select id="gainMyInformation" resultMap="harvestAddressResultMap">
+        SELECT * FROM shoppingmall.harvestaddress WHERE userId = #{userId}
+    </select>
+    <update id="updateHarvestAddress">
+        UPDATE shoppingmall.harvestaddress
+        SET harvestAddressName = #{harvestaddressEntity.harvestAddressName},typeId = #{harvestaddressEntity.typeId}
+        WHERE userId = #{harvestaddressEntity.userId}
+    </update>
+    <insert id="addHarvestAddress">
+        INSERT INTO shoppingmall.harvestaddress(harvestAddressName, harvestIsDefault, typeId, userId) VALUES (#{harvestaddressEntity.harvestAddressName},0,#{harvestaddressEntity.typeId},#{harvestaddressEntity.userId})
+    </insert>
+    <delete id="removeHarvestAddress">
+        DELETE FROM shoppingmall.harvestaddress WHERE id = #{harvestaddressEntity.id}
+    </delete>
+    <update id="setDefaultHarvestAddress">
+        UPDATE shoppingmall.harvestaddress
+        SET harvestIsDefault = #{harvestaddressEntity.harvestIsDefault}
+        WHERE userId = #{harvestaddressEntity.userId}
+    </update>
+</mapper>

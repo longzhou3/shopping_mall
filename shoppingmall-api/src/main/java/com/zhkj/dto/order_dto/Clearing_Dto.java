@@ -1,25 +1,21 @@
 package com.zhkj.dto.order_dto;
 
 import com.zhkj.dto.encrypt_dto.Encrypt_Returning;
-import com.zhkj.vo.order_vo.Address_Vo;
 
 import java.util.List;
 
 /**
- * 订单页dto
+ * 订单模块返回值对象
  */
-public class Order_Dto<T> {
-    //状态
-    private int status;
-
-    //地址
-    private Address_Vo address_vo;
-
+public class Clearing_Dto<T> {
     //总价
     private double price;
-    //密文对象
+    //状态
+    private int status;
+    //商品呢数据集合
+    private List<T> list;
+    //加密返回数据对象
     private Encrypt_Returning encrypt_returning;
-
 
     public Encrypt_Returning getEncrypt_returning() {
         return encrypt_returning;
@@ -27,16 +23,6 @@ public class Order_Dto<T> {
 
     public void setEncrypt_returning(Encrypt_Returning encrypt_returning) {
         this.encrypt_returning = encrypt_returning;
-    }
-
-
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     public int getStatus() {
@@ -47,11 +33,20 @@ public class Order_Dto<T> {
         this.status = status;
     }
 
-    public Address_Vo getAddress_vo() {
-        return address_vo;
+
+    public List<T> getList() {
+        return list;
     }
 
-    public void setAddress_vo(Address_Vo address_vo) {
-        this.address_vo = address_vo;
+    public void setList(List<T> list) {
+        this.list = list;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

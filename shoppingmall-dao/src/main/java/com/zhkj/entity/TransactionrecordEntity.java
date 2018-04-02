@@ -3,7 +3,7 @@ package com.zhkj.entity;
 import java.sql.Timestamp;
 
 /**
- * 交易记录表实体类
+ * Created by lenovo on 2018/4/2.
  */
 public class TransactionrecordEntity {
     private int id;
@@ -52,5 +52,30 @@ public class TransactionrecordEntity {
         this.userId = userId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        TransactionrecordEntity that = (TransactionrecordEntity) o;
+
+        if (id != that.id) return false;
+        if (creationTime != null ? !creationTime.equals(that.creationTime) : that.creationTime != null) return false;
+        if (logistisTypeId != null ? !logistisTypeId.equals(that.logistisTypeId) : that.logistisTypeId != null)
+            return false;
+        if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
+        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (creationTime != null ? creationTime.hashCode() : 0);
+        result = 31 * result + (logistisTypeId != null ? logistisTypeId.hashCode() : 0);
+        result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
+        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+        return result;
+    }
 }

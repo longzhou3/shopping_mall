@@ -1,7 +1,7 @@
 package com.zhkj.entity;
 
 /**
- * 收货地址实体类
+ * Created by lenovo on 2018/4/2.
  */
 public class HarvestaddressEntity {
     private int id;
@@ -50,5 +50,31 @@ public class HarvestaddressEntity {
         this.userId = userId;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
 
+        HarvestaddressEntity that = (HarvestaddressEntity) o;
+
+        if (id != that.id) return false;
+        if (harvestAddressName != null ? !harvestAddressName.equals(that.harvestAddressName) : that.harvestAddressName != null)
+            return false;
+        if (harvestIsDefault != null ? !harvestIsDefault.equals(that.harvestIsDefault) : that.harvestIsDefault != null)
+            return false;
+        if (typeId != null ? !typeId.equals(that.typeId) : that.typeId != null) return false;
+        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (harvestAddressName != null ? harvestAddressName.hashCode() : 0);
+        result = 31 * result + (harvestIsDefault != null ? harvestIsDefault.hashCode() : 0);
+        result = 31 * result + (typeId != null ? typeId.hashCode() : 0);
+        result = 31 * result + (userId != null ? userId.hashCode() : 0);
+        return result;
+    }
 }

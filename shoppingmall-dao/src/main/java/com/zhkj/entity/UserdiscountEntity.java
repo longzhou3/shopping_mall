@@ -3,10 +3,10 @@ package com.zhkj.entity;
 /**
  * Created by lenovo on 2018/4/2.
  */
-public class MycollectEntity {
+public class UserdiscountEntity {
     private int id;
     private Integer userId;
-    private Integer commdityId;
+    private Integer discountId;
 
     public int getId() {
         return id;
@@ -24,12 +24,12 @@ public class MycollectEntity {
         this.userId = userId;
     }
 
-    public Integer getCommdityId() {
-        return commdityId;
+    public Integer getDiscountId() {
+        return discountId;
     }
 
-    public void setCommdityId(Integer commdityId) {
-        this.commdityId = commdityId;
+    public void setDiscountId(Integer discountId) {
+        this.discountId = discountId;
     }
 
     @Override
@@ -37,11 +37,11 @@ public class MycollectEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        MycollectEntity that = (MycollectEntity) o;
+        UserdiscountEntity that = (UserdiscountEntity) o;
 
         if (id != that.id) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
-        if (commdityId != null ? !commdityId.equals(that.commdityId) : that.commdityId != null) return false;
+        if (discountId != null ? !discountId.equals(that.discountId) : that.discountId != null) return false;
 
         return true;
     }
@@ -50,7 +50,7 @@ public class MycollectEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
-        result = 31 * result + (commdityId != null ? commdityId.hashCode() : 0);
+        result = 31 * result + (discountId != null ? discountId.hashCode() : 0);
         return result;
     }
 }

@@ -33,7 +33,7 @@ public class Conver_Type {
      * @param <R>
      * @return
      */
-    public static <T,R> List<T> convert(List<T> entity1, List<R> entity2,String name){
+    public static <T,R> List<T> convertToList(List<T> entity1, List<R> entity2,String name){
         entity1 = Lists.transform(entity2, new Function<R, T>() {
             @Nullable
             @Override
