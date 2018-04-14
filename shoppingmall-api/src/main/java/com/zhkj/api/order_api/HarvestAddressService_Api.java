@@ -13,28 +13,28 @@ public interface HarvestAddressService_Api {
      * @param harvesaddress_vo 所需信息
      * @return 是否成功
      */
-    int updateHarvestAddress(Harvestaddress_Vo harvesaddress_vo);
+    boolean updateHarvestAddress(Harvestaddress_Vo harvesaddress_vo);
 
     /**
      * 添加收货地址
      * @param harvesaddress_vo 所需信息
      * @return 是否成功
      */
-    int addHarvestAddress(Harvestaddress_Vo harvesaddress_vo);
+    boolean addHarvestAddress(Harvestaddress_Vo harvesaddress_vo);
 
     /**
      * 移除收货地址
      * @param harvestaddress_vo 所需信息
      * @return 是否成功
      */
-    int removeHarvestAddress(Harvestaddress_Vo harvestaddress_vo);
+    boolean removeHarvestAddress(Harvestaddress_Vo harvestaddress_vo);
 
     /**
      * 设置默认收货地址
      * @param harvestaddress_vo 所需参数
      * @return 是否成功
      */
-    int setDefaultHarvestAddress(Harvestaddress_Vo harvestaddress_vo);
+    boolean setDefaultHarvestAddress(Harvestaddress_Vo harvestaddress_vo);
 
     /**
      * 获取我的所有收货地址信息

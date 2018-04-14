@@ -45,6 +45,7 @@ public class Encrypt_Service implements Encrypt_Api {
      */
     @Override
     public boolean cipher_Text_Alignment(String content, String password, String encrypt) {
+        System.out.println(encrypt(content,password));
        if ( encrypt(content,password).equals(encrypt)){
            return true;
        }else{

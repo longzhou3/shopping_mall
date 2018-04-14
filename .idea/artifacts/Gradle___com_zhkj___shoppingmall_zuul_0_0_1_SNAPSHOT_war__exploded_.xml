@@ -141,7 +141,7 @@
           <element id="library" level="project" name="Gradle: org.springframework:spring-tx:4.3.14.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework:spring-oxm:4.3.14.RELEASE" />
           <element id="library" level="project" name="Gradle: org.springframework.data:spring-data-commons:1.13.10.RELEASE" />
-          <element id="file-copy" path="F:/gradle仓库/.gradle/caches/modules-2/files-2.1/com.alibaba/fastjson/1.2.46/1510c47faaf3d484221ab20e4ec9d42cfa4984cb/fastjson-1.2.46.jar" />
+          <element id="library" level="project" name="Gradle: com.alibaba:fastjson:1.2.46" />
         </element>
       </element>
     </root>

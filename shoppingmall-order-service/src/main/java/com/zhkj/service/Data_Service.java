@@ -23,11 +23,10 @@ public class Data_Service implements Data_Api {
      * @return 返回给前端页面
      */
     @Override
-    public Clearing_Dto transfer_Clearing(Clearing_Vo clearing_vo) {
-        String enctyptToString = clearing_vo.getEncrypt_returning().getJson_Name();
+    public Clearing_Dto transfer_Clearing(Clearing_Vo clearing_vo,String json) {
         String private_Key = clearing_vo.getEncrypt_returning().getPrivate_Key();
         String enctypt = clearing_vo.getEncrypt_returning().getEncrypt();
-        Boolean boolean_Enctypt = encrypt_service.cipher_Text_Alignment(enctyptToString, private_Key, enctypt);
+        Boolean boolean_Enctypt = encrypt_service.cipher_Text_Alignment(json, private_Key, enctypt);
         if (boolean_Enctypt) {
             Clearing_Dto clearing_dto = new Clearing_Dto();
             clearing_dto.setList(clearing_vo.getList());
@@ -47,11 +46,11 @@ public class Data_Service implements Data_Api {
      * @return
      */
     @Override
-    public Order_Dto transfer_Order(Order_Vo order_vo) {
+    public Order_Dto transfer_Order(Order_Vo order_vo,String json) {
         String enctyptToString = order_vo.getEncrypt_returning().getJson_Name();
         String private_Key = order_vo.getEncrypt_returning().getPrivate_Key();
         String enctypt = order_vo.getEncrypt_returning().getEncrypt();
-        Boolean boolean_Enctypt = encrypt_service.cipher_Text_Alignment(enctyptToString, private_Key, enctypt);
+        Boolean boolean_Enctypt = encrypt_service.cipher_Text_Alignment(json, private_Key, enctypt);
         if (boolean_Enctypt) {
             Order_Dto order_dto = new Order_Dto();
             order_dto.setPrice(order_vo.getPrice());
