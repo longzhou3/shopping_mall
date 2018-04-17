@@ -5,6 +5,8 @@ import com.zhkj.api.order_api.HarvestAddressService_Api;
 import com.zhkj.copy_properties.Conver_Type;
 import com.zhkj.dto.order_dto.HarvestaddressEntity_Dto;
 import com.zhkj.entity.HarvestaddressEntity;
+import com.zhkj.entity.UserEntity;
+
 import com.zhkj.mapper.order_mapper.HarvestAddressMapper;
 import com.zhkj.vo.order_vo.Harvestaddress_Vo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,55 +26,65 @@ public class HarvestAddressService implements HarvestAddressService_Api {
     private HarvestAddressMapper harvestAddressMapper;
 
     @Override
-    public int updateHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
-        int index = 0;
-        if(judgeUserIdAndDto(harvesaddress_vo.getUserId(),harvesaddress_vo.getHarvestAddress())){
+    public boolean updateHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
+        boolean result = false;
+        if(judgeUserIdAndAddressId(harvesaddress_vo.getHarvestAddress().getUserId(),harvesaddress_vo.getHarvestAddress().getId())){
+            if(judgeUserIdAndDto(harvesaddress_vo.getHarvestAddress().getUserId(),harvesaddress_vo.getHarvestAddress())){
+                HarvestaddressEntity harvestaddressEntity = new HarvestaddressEntity();
+                harvestaddressEntity =Conver_Type.convert(harvestaddressEntity,harvesaddress_vo.getHarvestAddress());
+                harvestAddressMapper.updateHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(),harvestaddressEntity);
+                result = true;
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public boolean addHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
+        boolean result = false;
+        if (judgeUserIdAndDto(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress())) {
             HarvestaddressEntity harvestaddressEntity = new HarvestaddressEntity();
             harvestaddressEntity = Conver_Type.convert(harvestaddressEntity, harvesaddress_vo.getHarvestAddress());
-            index = harvestAddressMapper.updateHarvestAddress(harvesaddress_vo.getUserId(),harvestaddressEntity);
+            harvestAddressMapper.addHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvestaddressEntity);
+            result = true;
         }
-        return index;
+        return result;
     }
 
     @Override
-    public int addHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
-        int index = 0;
-        if(judgeUserIdAndDto(harvesaddress_vo.getUserId(),harvesaddress_vo.getHarvestAddress())){
-            HarvestaddressEntity harvestaddressEntity = new HarvestaddressEntity();
-            harvestaddressEntity = Conver_Type.convert(harvestaddressEntity,harvesaddress_vo.getHarvestAddress());
-            index = harvestAddressMapper.addHarvestAddress(harvesaddress_vo.getUserId(),harvestaddressEntity);
+    public boolean removeHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
+        boolean result = false;
+        if (judgeUserIdAndAddressId(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId())) {
+            harvestAddressMapper.removeHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId());
+            result = true;
         }
-        return index;
+        return result;
     }
 
     @Override
-    public int removeHarvestAddress(Harvestaddress_Vo harvestaddress_vo) {
-        int index = 0;
-        if(judgeUserIdAndAddressId(harvestaddress_vo.getUserId(),harvestaddress_vo.getHarvestAddress().getId())){
-            index = harvestAddressMapper.removeHarvestAddress(harvestaddress_vo.getUserId(),harvestaddress_vo.getHarvestAddress().getId());
+    public boolean setDefaultHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
+        boolean result = false;
+        if (judgeUserIdAndAddressId(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId())) {
+            if(harvestAddressMapper.selectDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId()) != null){
+                harvestAddressMapper.updateDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId());
+                result = true;
+            }else {
+                harvestAddressMapper.setDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId());
+                result = true;
+            }
         }
-        return index;
+        return result;
     }
 
     @Override
-    public int setDefaultHarvestAddress(Harvestaddress_Vo harvestaddress_vo) {
-        int index = 0;
-        if(judgeUserIdAndAddressId(harvestaddress_vo.getUserId(),harvestaddress_vo.getHarvestAddress().getId())){
-            index = harvestAddressMapper.setDefaultHarvestAddress(harvestaddress_vo.getUserId(),harvestaddress_vo.getHarvestAddress().getId());
-        }
-        return index;
-    }
-
-    @Override
-    public List<HarvestaddressEntity_Dto> gainMyInformation(Harvestaddress_Vo harvestaddress_vo) {
+    public List<HarvestaddressEntity_Dto> gainMyInformation(Harvestaddress_Vo harvesaddress_vo) {
         List<HarvestaddressEntity_Dto> listEntityDto = new ArrayList<>();
-        if(harvestaddress_vo.getUserId() != null && harvestaddress_vo.getUserId() > 0){
-            List<HarvestaddressEntity> listEntity = harvestAddressMapper.gainMyInformation(harvestaddress_vo.getUserId());
-            listEntityDto = Conver_Type.convertToList(listEntityDto,listEntity,"com.zhkj.dto.HarvestaddressEntity_Dto");
+        if(harvesaddress_vo.getHarvestAddress().getUserId() > 0) {
+            List<HarvestaddressEntity> listEntity = harvestAddressMapper.gainMyInformation(harvesaddress_vo.getHarvestAddress().getUserId());
+            listEntityDto = Conver_Type.convertToList(listEntityDto, listEntity, "com.zhkj.dto.order_dto.HarvestaddressEntity_Dto");
         }
         return listEntityDto;
     }
-
     /**
      * 判断dto或userId异常
      * @param userId 所属用户
@@ -81,8 +93,8 @@ public class HarvestAddressService implements HarvestAddressService_Api {
      */
     private boolean judgeUserIdAndDto(Integer userId,HarvestaddressEntity_Dto dto){
         boolean result = false;
-        if(userId != null && userId > 0){
-            if(dto != null){
+        if(dto != null){
+            if(userId != null && userId > 0){
                 result = true;
             }
         }

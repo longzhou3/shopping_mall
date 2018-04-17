@@ -2,6 +2,8 @@
 dependencies {
     compile project(":shoppingmall-api")
     compile project(":shoppingmall-dao")
+    // https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java
+    compile group: 'com.alipay.sdk', name: 'alipay-sdk-java', version: '3.0.0'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard'
     compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')

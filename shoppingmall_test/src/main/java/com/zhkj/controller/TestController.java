@@ -23,6 +23,6 @@ public class TestController {
               //添加session信息
               session.setAttribute("name","234243234");
               List<UserEntity> lists=new ArrayList<>();
-              return Conver_Type.convert(lists,testMapper.findByClassesEntity(),"com.zhkj.dto.test.UserEntity");
+              return Conver_Type.convertToList(lists,testMapper.findByClassesEntity(),"com.zhkj.dto.test.UserEntity");
         }
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zhkj.mapper.HarvestAddressMapper">
+<mapper namespace="com.zhkj.mapper.order_mapper.HarvestAddressMapper">
     <resultMap id="harvestAddressResultMap" type="com.zhkj.entity.HarvestaddressEntity">
         <id property="id" column="id" />
         <result property="harvestAddressName" column="harvestAddressName"/>
@@ -10,22 +10,35 @@
         <result property="userId" column="userId" />
     </resultMap>
     <select id="gainMyInformation" resultMap="harvestAddressResultMap">
-        SELECT * FROM shoppingmall.harvestaddress WHERE userId = #{userId}
+        SELECT * FROM shoppingmall.harvestaddress
+        WHERE userId = #{userId}
     </select>
     <update id="updateHarvestAddress">
         UPDATE shoppingmall.harvestaddress
         SET harvestAddressName = #{harvestaddressEntity.harvestAddressName},typeId = #{harvestaddressEntity.typeId}
-        WHERE userId = #{harvestaddressEntity.userId}
+        WHERE userId = #{userId}
     </update>
     <insert id="addHarvestAddress">
-        INSERT INTO shoppingmall.harvestaddress(harvestAddressName, harvestIsDefault, typeId, userId) VALUES (#{harvestaddressEntity.harvestAddressName},0,#{harvestaddressEntity.typeId},#{harvestaddressEntity.userId})
+        INSERT INTO shoppingmall.harvestaddress(harvestAddressName, harvestIsDefault, typeId, userId)
+        VALUES (#{harvestaddressEntity.harvestAddressName},#{harvestaddressEntity.harvestIsDefault},#{harvestaddressEntity.typeId},#{harvestaddressEntity.userId})
     </insert>
     <delete id="removeHarvestAddress">
-        DELETE FROM shoppingmall.harvestaddress WHERE id = #{harvestaddressEntity.id}
+        DELETE FROM shoppingmall.harvestaddress
+        WHERE id = #{id} AND userId = #{userId}
     </delete>
+    <select id="selectDefaultHarvestAddress" resultMap="harvestAddressResultMap">
+        SELECT *
+        FROM shoppingmall.harvestaddress
+        WHERE userId = #{userId} AND harvestIsDefault = 1
+    </select>
     <update id="setDefaultHarvestAddress">
         UPDATE shoppingmall.harvestaddress
-        SET harvestIsDefault = #{harvestaddressEntity.harvestIsDefault}
-        WHERE userId = #{harvestaddressEntity.userId}
+        SET harvestIsDefault = 1
+        WHERE userId = #{userId}
+    </update>
+    <update id="updateDefaultHarvestAddress">
+        UPDATE shoppingmall.harvestaddress
+        SET harvestIsDefault = 0
+        WHERE userId = #{userId} AND harvestIsDefault = 1
     </update>
 </mapper>
