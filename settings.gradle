@@ -16,4 +16,6 @@ include 'shoppingmall-tools'
 include 'shoppingmall-config'
 include 'shoppingmall-zuul'
 include 'shoppingmall_test'
+include 'shoppingmall-security-service'
+include 'shoppingmall-zipkin-server'
 

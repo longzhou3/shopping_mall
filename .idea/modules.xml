@@ -16,9 +16,11 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-registration-center-three.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-registration-center-three.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-registration-center-twin.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-registration-center-twin.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-ribbon.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-ribbon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-security-service.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-security-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-seek-service.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-seek-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-tools.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-tools.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-trolley-service.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-trolley-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-zipkin-server.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-zipkin-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-zuul/shoppingmall-zuul.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-zuul/shoppingmall-zuul.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall_test.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall_test.iml" />
     </modules>
