@@ -1,0 +1,33 @@
+{
+  "settings": {
+    "number_of_relicas": 0
+  },
+  "mappings": {
+    "commodity": {
+      "dynamic": false,
+      "properties": {
+        "commodityName": {
+          "type": "text",
+          "index": "analyzed"
+        },
+        "commodityPrice": {
+          "type": "scaled_float"
+        },
+        "discountPrice": {
+          "type": "scaled_float"
+        },
+        "commodityIntroduce": {
+          "type": "text",
+          "index": "analyzed"
+        },
+        "typeName": {
+          "type": "keyword"
+        },
+        "discountIntroduce": {
+          "type": "text",
+          "index": "analyzed"
+        }
+      }
+    }
+  }
+}

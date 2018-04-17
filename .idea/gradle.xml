@@ -23,9 +23,11 @@
             <option value="$PROJECT_DIR$/shoppingmall-registration-center-three" />
             <option value="$PROJECT_DIR$/shoppingmall-registration-center-twin" />
             <option value="$PROJECT_DIR$/shoppingmall-ribbon" />
+            <option value="$PROJECT_DIR$/shoppingmall-security-service" />
             <option value="$PROJECT_DIR$/shoppingmall-seek-service" />
             <option value="$PROJECT_DIR$/shoppingmall-tools" />
             <option value="$PROJECT_DIR$/shoppingmall-trolley-service" />
+            <option value="$PROJECT_DIR$/shoppingmall-zipkin-server" />
             <option value="$PROJECT_DIR$/shoppingmall-zuul" />
             <option value="$PROJECT_DIR$/shoppingmall_test" />
           </set>
