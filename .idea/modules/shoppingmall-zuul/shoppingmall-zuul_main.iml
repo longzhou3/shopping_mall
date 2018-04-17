@@ -7,13 +7,13 @@
     <facet type="web" name="Web Gradle : shoppingmall-zuul-0.0.1-SNAPSHOT.war">
       <configuration>
         <webroots>
-          <root url="file://F:\shopping_mall\shoppingmall-zuul\src\main\webapp" relative="/" />
+          <root url="file://$MODULE_DIR$/../../../shoppingmall-zuul/src/main/webapp" relative="/" />
         </webroots>
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../../../shoppingmall-zuul/out/production/classes" />
+    <output url="file://$MODULE_DIR$/../../../shoppingmall-zuul/build/classes/java/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../shoppingmall-zuul/src/main">
       <sourceFolder url="file://$MODULE_DIR$/../../../shoppingmall-zuul/src/main/java" isTestSource="false" />
