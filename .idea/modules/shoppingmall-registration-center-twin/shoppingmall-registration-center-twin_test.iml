@@ -4,9 +4,15 @@
     <facet type="Spring" name="Spring">
       <configuration />
     </facet>
+    <facet type="web" name="Web">
+      <configuration>
+        <webroots />
+        <sourceRoots />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output-test url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin/build/classes/java/test" />
+    <output-test url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin/out/test/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin/src/test/java" isTestSource="true" />
