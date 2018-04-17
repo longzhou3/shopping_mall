@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="shoppingmall-activity-service_main" target="1.8" />
+      <module name="shoppingmall-activity-service_test" target="1.8" />
+      <module name="shoppingmall-after-sale-service_main" target="1.8" />
+      <module name="shoppingmall-after-sale-service_test" target="1.8" />
+      <module name="shoppingmall-api_main" target="1.8" />
+      <module name="shoppingmall-api_test" target="1.8" />
+      <module name="shoppingmall-config_main" target="1.8" />
+      <module name="shoppingmall-config_test" target="1.8" />
+      <module name="shoppingmall-dao_main" target="1.8" />
+      <module name="shoppingmall-dao_test" target="1.8" />
+      <module name="shoppingmall-encrypt-service_main" target="1.8" />
+      <module name="shoppingmall-encrypt-service_test" target="1.8" />
+      <module name="shoppingmall-login-service_main" target="1.8" />
+      <module name="shoppingmall-login-service_test" target="1.8" />
+      <module name="shoppingmall-order-service_main" target="1.8" />
+      <module name="shoppingmall-order-service_test" target="1.8" />
+      <module name="shoppingmall-pay-service_main" target="1.8" />
+      <module name="shoppingmall-pay-service_test" target="1.8" />
+      <module name="shoppingmall-registration-center-three_main" target="1.8" />
+      <module name="shoppingmall-registration-center-three_test" target="1.8" />
+      <module name="shoppingmall-registration-center-twin_main" target="1.8" />
+      <module name="shoppingmall-registration-center-twin_test" target="1.8" />
+      <module name="shoppingmall-registration-center_main" target="1.8" />
+      <module name="shoppingmall-registration-center_test" target="1.8" />
+      <module name="shoppingmall-ribbon_main" target="1.8" />
+      <module name="shoppingmall-ribbon_test" target="1.8" />
+      <module name="shoppingmall-security-service_main" target="1.8" />
+      <module name="shoppingmall-security-service_test" target="1.8" />
+      <module name="shoppingmall-seek-service_main" target="1.8" />
+      <module name="shoppingmall-seek-service_test" target="1.8" />
+      <module name="shoppingmall-tools_main" target="1.8" />
+      <module name="shoppingmall-tools_test" target="1.8" />
+      <module name="shoppingmall-trolley-service_main" target="1.8" />
+      <module name="shoppingmall-trolley-service_test" target="1.8" />
+      <module name="shoppingmall-zipkin-server_main" target="1.8" />
+      <module name="shoppingmall-zipkin-server_test" target="1.8" />
+      <module name="shoppingmall-zuul_main" target="1.8" />
+      <module name="shoppingmall-zuul_test" target="1.8" />
+      <module name="shoppingmall_test_main" target="1.8" />
+      <module name="shoppingmall_test_test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

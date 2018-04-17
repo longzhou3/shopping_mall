@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":shoppingmall-registration-center-twin" external.linked.project.path="$MODULE_DIR$/../../../shoppingmall-registration-center-twin" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="com.zhkj" external.system.module.version="0.0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin">
+      <excludeFolder url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../shoppingmall-registration-center-twin/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
