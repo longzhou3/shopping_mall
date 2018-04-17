@@ -2,7 +2,7 @@
 dependencies {
     compile project(":shoppingmall-api")
     compile project(":shoppingmall-dao")
-    // https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java
+    // 支付宝沙箱jar
     compile group: 'com.alipay.sdk', name: 'alipay-sdk-java', version: '3.0.0'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix'
     compile group: 'org.springframework.cloud', name: 'spring-cloud-starter-hystrix-dashboard'
@@ -11,6 +11,13 @@ dependencies {
     //连接池
     compile "com.alibaba:druid:1.0.12"
     compile("org.springframework.cloud:spring-cloud-starter-config")
+    // sharding-jdbc-core
+    compile group: 'io.shardingjdbc', name: 'sharding-jdbc-core', version: '2.0.3'
+
+    compile group: 'io.shardingjdbc', name: 'sharding-jdbc-core-spring-namespace',version: '2.0.3'
+
+
+
 
     //spring-session
     compile group: 'org.springframework.session', name: 'spring-session-data-redis'

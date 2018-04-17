@@ -1,7 +1,7 @@
 package com.zhkj.entity;
 
 /**
- * Created by lenovo on 2018/4/2.
+ * Created by lenovo on 2018/4/16.
  */
 public class AuthenticationEntity {
     private int id;
@@ -9,7 +9,6 @@ public class AuthenticationEntity {
     private String userAboutAddress;
     private String userAddress;
     private String userPhoneNumber;
-    private Integer userId;
 
     public int getId() {
         return id;
@@ -51,14 +50,6 @@ public class AuthenticationEntity {
         this.userPhoneNumber = userPhoneNumber;
     }
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -73,7 +64,6 @@ public class AuthenticationEntity {
         if (userAddress != null ? !userAddress.equals(that.userAddress) : that.userAddress != null) return false;
         if (userPhoneNumber != null ? !userPhoneNumber.equals(that.userPhoneNumber) : that.userPhoneNumber != null)
             return false;
-        if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
 
         return true;
     }
@@ -85,7 +75,6 @@ public class AuthenticationEntity {
         result = 31 * result + (userAboutAddress != null ? userAboutAddress.hashCode() : 0);
         result = 31 * result + (userAddress != null ? userAddress.hashCode() : 0);
         result = 31 * result + (userPhoneNumber != null ? userPhoneNumber.hashCode() : 0);
-        result = 31 * result + (userId != null ? userId.hashCode() : 0);
         return result;
     }
 }

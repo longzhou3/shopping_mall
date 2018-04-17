@@ -1,7 +1,7 @@
 package com.zhkj.entity;
 
 /**
- * Created by lenovo on 2018/4/2.
+ * Created by lenovo on 2018/4/16.
  */
 public class MycollectEntity {
     private int id;

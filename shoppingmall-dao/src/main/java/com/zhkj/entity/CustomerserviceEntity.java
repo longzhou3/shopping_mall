@@ -3,7 +3,7 @@ package com.zhkj.entity;
 import java.sql.Timestamp;
 
 /**
- * Created by lenovo on 2018/4/2.
+ * Created by lenovo on 2018/4/16.
  */
 public class CustomerserviceEntity {
     private int id;

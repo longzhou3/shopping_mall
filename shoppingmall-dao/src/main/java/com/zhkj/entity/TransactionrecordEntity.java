@@ -3,12 +3,11 @@ package com.zhkj.entity;
 import java.sql.Timestamp;
 
 /**
- * Created by lenovo on 2018/4/2.
+ * Created by lenovo on 2018/4/16.
  */
 public class TransactionrecordEntity {
     private int id;
     private Timestamp creationTime;
-    private Integer logistisTypeId;
     private Integer orderId;
     private Integer userId;
 
@@ -26,14 +25,6 @@ public class TransactionrecordEntity {
 
     public void setCreationTime(Timestamp creationTime) {
         this.creationTime = creationTime;
-    }
-
-    public Integer getLogistisTypeId() {
-        return logistisTypeId;
-    }
-
-    public void setLogistisTypeId(Integer logistisTypeId) {
-        this.logistisTypeId = logistisTypeId;
     }
 
     public Integer getOrderId() {
@@ -61,8 +52,6 @@ public class TransactionrecordEntity {
 
         if (id != that.id) return false;
         if (creationTime != null ? !creationTime.equals(that.creationTime) : that.creationTime != null) return false;
-        if (logistisTypeId != null ? !logistisTypeId.equals(that.logistisTypeId) : that.logistisTypeId != null)
-            return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
 
@@ -73,7 +62,6 @@ public class TransactionrecordEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + (creationTime != null ? creationTime.hashCode() : 0);
-        result = 31 * result + (logistisTypeId != null ? logistisTypeId.hashCode() : 0);
         result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
         return result;
