@@ -54,19 +54,30 @@ CREATE TABLE `orderFrom`(
   `id` INT AUTO_INCREMENT UNIQUE COMMENT '订单id',
   `orderNumber` VARCHAR(50) COMMENT '订单编号',
   `orderCreationTime` DATETIME COMMENT '订单创建时间',
+  `orderEndTime` DATETIME COMMENT '订单结束时间',
   `userId` INT COMMENT '用户编号_外键 User(用户表)',
   `paymentTypeId` INT COMMENT '订单支付状态_外键 Type(类型表)',
   `logisticsTypeId` INT COMMENT '订单物流状态_外键 Type(类型表)'
 )CHARSET 'utf8';
-#创建 orderFromShop(订单商品表)
-DROP TABLE IF EXISTS `orderFromShop`;
-CREATE TABLE `orderFromShop`(
-  `id` INT AUTO_INCREMENT UNIQUE COMMENT '订单商品id',
+#创建 orderFromShop(订单商品表) 分表
+DROP TABLE IF EXISTS `orderFromShop0`;
+CREATE TABLE `orderFromShop0`(
+  `id` INT UNIQUE COMMENT '订单商品id',
   `feight` DECIMAL COMMENT '运费',
   `commodityPrice` DECIMAL COMMENT '商品实际购买价格',
   `commodityNumber` INT COMMENT '商品实际购买数量',
   `logisticsTypeId` INT COMMENT '订单商品物流状态_外键 Type(类型表)',
   `commodityId` INT COMMENT '订单商品信息_外键 commodity(商品表)'
+)CHARSET 'utf8';
+CREATE TABLE `orderFromShop1`(
+  `id` INT UNIQUE COMMENT '订单商品id',
+  `feight` DECIMAL COMMENT '运费',
+  `commodityPrice` DECIMAL COMMENT '商品实际购买价格',
+  `commodityNumber` INT COMMENT '商品实际购买数量',
+  `logisticsTypeId` INT COMMENT '订单商品物流状态_外键 Type(类型表)',
+  `commodityId` INT COMMENT '订单商品信息_外键 commodity(商品表)',
+  `speciTopicId` INT COMMENT '商品规格标题_外键 specificationsTopic(商品规格标题表)',
+  `speciDetailedId` INT COMMENT '商品规格详细_外键 sepcificationsDetailed(商品规格详细表)'
 )CHARSET 'utf8';
 #创建 transactionRecord (交易记录表)
 DROP TABLE IF EXISTS `transactionRecord`;
@@ -102,11 +113,46 @@ DROP TABLE IF EXISTS `commodity`;
 CREATE TABLE `commodity`(
   `id` INT AUTO_INCREMENT UNIQUE COMMENT '商品id',
   `commodityName` VARCHAR(20) COMMENT '商品名称',
-  `commodityPrice` DECIMAL COMMENT '商品价格',
   `commodityIntroduce` VARCHAR(200) COMMENT '商品介绍',
-  `commodityPictureUrl` VARCHAR(100) COMMENT '商品图片路径',
-  `commodityNumber` INT COMMENT '商品数量',
+  `bigPictureUrl` VARCHAR(100) COMMENT '商品大图片路径',
   `commodityTypeId` INT COMMENT '商品类型id_外键 Type(类型表)'
+)CHARSET 'utf8';
+#创建 commodityTypeRelation(商品分类关系表)
+DROP TABLE IF EXISTS `commodityTypeRelation`;
+CREATE TABLE `commodityTypeRelation`(
+  `id` INT AUTO_INCREMENT UNIQUE COMMENT '商品分类关系id',
+  `shopPrimaryTypeId` INT COMMENT '商品一级分类_外键 Type(类型表)',
+  `shopMinorTypeId` INT COMMENT '商品二级分类_外键 Type(类型表)',
+  `commodityId` INT COMMENT '商品Id_外键 Commodity(商品表)'
+)CHARSET 'utf8';
+#创建 specificationsRelation(商品规格关系表)
+DROP TABLE IF EXISTS `specificationsRelation`;
+CREATE TABLE `specificationsRelation`(
+  `id` INT AUTO_INCREMENT UNIQUE COMMENT '商品规格关系id',
+  `commodityNumber` INT COMMENT '商品数量',
+  `commodityPrice` DECIMAL COMMENT '商品价格',
+  `smallPictureUrl` VARCHAR(100) COMMENT '商品小图片路径',
+  `typeId` INT COMMENT '商品促销状态_外键 Type(类型表)'
+)CHARSET 'utf8';
+#创建 specificationsTopic(商品规格标题表)
+DROP TABLE IF EXISTS `specificationsTopic`;
+CREATE TABLE `specificationsTopic`(
+  `id` INT AUTO_INCREMENT UNIQUE COMMENT '商品规格标题id',
+  `name` VARCHAR(20) COMMENT '商品规格标题名称'
+)CHARSET 'utf8';
+#创建 specificationsDetailed(商品规格详细表)
+DROP TABLE IF EXISTS `specificationsDetailed`;
+CREATE TABLE `specificationsDetailed`(
+  `id` INT AUTO_INCREMENT UNIQUE COMMENT '商品规格详细id',
+  `name` VARCHAR(50) COMMENT '商品规格详细名称'
+)CHARSET 'utf8';
+#创建 CommodityEvaluation(商品评价表)
+CREATE TABLE `commodityEvaluation`(
+  `id` INT AUTO_INCREMENT UNIQUE COMMENT '商品评价id',
+  `evaluationTime` DATETIME COMMENT '商品评价时间',
+  `evaluationContent` VARCHAR(200) COMMENT '商品评价内容',
+  `evaluationTypeId` INT COMMENT '商品评价状态_外键 Type(类型表)',
+  `userId` INT COMMENT '所属用户_外键 User(用户表)'
 )CHARSET 'utf8';
 #创建 promotionItem(促销商品表)
 DROP TABLE IF EXISTS `promotionItem`;
@@ -126,6 +172,7 @@ CREATE TABLE `customerService`(
   `demandTime` INT COMMENT '需求时间',
   `acceptanceTime` DATETIME COMMENT '受理时间',
   `commitTime` DATETIME COMMENT '提交时间',
+  `typeId` INT COMMENT '类型id_外键 Type(类型表)',
   `orderId` INT COMMENT '订单id_外键 OrderFrom(订单表)',
   `userId` INT COMMENT '用户id_外键 User(用户表)'
 )CHARSET 'utf8';

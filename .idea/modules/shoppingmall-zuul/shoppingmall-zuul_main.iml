@@ -7,7 +7,7 @@
     <facet type="web" name="Web Gradle : shoppingmall-zuul-0.0.1-SNAPSHOT.war">
       <configuration>
         <webroots>
-          <root url="file://C:\Users\幼稚鬼\Desktop\shopping_mall\shoppingmall-zuul\src\main\webapp" relative="/" />
+          <root url="file://F:\shopping_mall\shoppingmall-zuul\src\main\webapp" relative="/" />
         </webroots>
       </configuration>
     </facet>

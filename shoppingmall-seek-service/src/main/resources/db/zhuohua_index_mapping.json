@@ -1,20 +1,21 @@
 {
   "settings": {
-    "number_of_relicas": 0
+    "number_of_replicas": 0
   },
   "mappings": {
     "commodity": {
       "dynamic": false,
       "properties": {
+        "id":{
+          "type":"long"
+        },
         "commodityName": {
           "type": "text",
           "index": "analyzed"
         },
         "commodityPrice": {
-          "type": "scaled_float"
-        },
-        "discountPrice": {
-          "type": "scaled_float"
+          "type": "scaled_float",
+          "scaling_factor": 100
         },
         "commodityIntroduce": {
           "type": "text",

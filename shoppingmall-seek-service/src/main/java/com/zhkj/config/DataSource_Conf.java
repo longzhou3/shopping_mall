@@ -24,10 +24,10 @@ public class DataSource_Conf {
     @Bean
     public DataSource dataSource(){
         DruidDataSource druidDataSource=new DruidDataSource();
-        druidDataSource.setUsername(configure.getUsername());
-        druidDataSource.setPassword(configure.getPassword());
-        druidDataSource.setUrl(configure.getUrl());
-        druidDataSource.setDriverClassName(configure.getDriver());
+        druidDataSource.setUsername("root");
+        druidDataSource.setPassword("Kangkang1.");
+        druidDataSource.setUrl("jdbc:mysql://47.95.240.252:3306/shoppingMall?characterEncoding=utf-8&useSSL=false");
+//        druidDataSource.setDriverClassName(configure.getDriver());
         return druidDataSource;
     }
     @Autowired
