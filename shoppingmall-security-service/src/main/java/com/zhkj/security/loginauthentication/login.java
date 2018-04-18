@@ -18,5 +18,6 @@ public class login implements LoginService {
         UsernamePasswordToken token = new UsernamePasswordToken(userName,password);
         subject.login(token);
         subject.logout();
+
     }
 }
