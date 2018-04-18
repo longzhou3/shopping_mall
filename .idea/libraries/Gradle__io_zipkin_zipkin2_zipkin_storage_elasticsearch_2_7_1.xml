@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.zipkin.zipkin2:zipkin-storage-elasticsearch:2.7.1">
+    <CLASSES>
+      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.zipkin2/zipkin-storage-elasticsearch/2.7.1/fe3f4d3248e0c8d13955e50dfe291c31044545d7/zipkin-storage-elasticsearch-2.7.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.zipkin2/zipkin-storage-elasticsearch/2.7.1/f91a67d532e434fa1b55a2309077c7ee2e151b6e/zipkin-storage-elasticsearch-2.7.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
