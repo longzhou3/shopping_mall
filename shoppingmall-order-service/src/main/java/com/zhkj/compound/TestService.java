@@ -2,6 +2,8 @@ package com.zhkj.compound;
 
 import com.zhkj.entity.Orderfromshop0Entity;
 import com.zhkj.mapper.pay_mapper.OrderFromShopMapper;
+import com.zhkj.service.sharding_jdbc_key.SimpleKeyService;
+import com.zhkj.util.SimpleKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,10 +14,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestService {
     @Autowired
-    OrderFromShopMapper testPayMapper;
+   private OrderFromShopMapper testPayMapper;
+    @Autowired
+   private SimpleKeyService simpleKeyService;
     @RequestMapping("/a")
         public String a(){
         for (int i=1;i<10;i++){
+        SimpleKeyUtil.id=simpleKeyService.getKey();
         Orderfromshop0Entity orderfromshop0Entity=new Orderfromshop0Entity();
         orderfromshop0Entity.setLogisticsTypeId(1);
         orderfromshop0Entity.setOrderFromId(1);

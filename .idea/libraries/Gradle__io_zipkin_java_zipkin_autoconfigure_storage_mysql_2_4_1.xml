@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: io.zipkin.java:zipkin-autoconfigure-storage-mysql:2.4.1">
     <CLASSES>
-      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-storage-mysql/2.4.1/d39647be68d5f155be43b604fae6b197f75f1c0/zipkin-autoconfigure-storage-mysql-2.4.1.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-storage-mysql/2.4.1/d39647be68d5f155be43b604fae6b197f75f1c0/zipkin-autoconfigure-storage-mysql-2.4.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-storage-mysql/2.4.1/d9419af60c628ebce9eb9dcb643f5114d9ac804/zipkin-autoconfigure-storage-mysql-2.4.1-sources.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-storage-mysql/2.4.1/d9419af60c628ebce9eb9dcb643f5114d9ac804/zipkin-autoconfigure-storage-mysql-2.4.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

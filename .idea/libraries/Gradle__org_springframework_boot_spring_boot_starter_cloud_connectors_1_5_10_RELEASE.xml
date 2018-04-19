@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: org.springframework.boot:spring-boot-starter-cloud-connectors:1.5.10.RELEASE">
     <CLASSES>
-      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-cloud-connectors/1.5.10.RELEASE/c7652818c1eb37bc9e0c4b686873b8876c579a5e/spring-boot-starter-cloud-connectors-1.5.10.RELEASE.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-cloud-connectors/1.5.10.RELEASE/c7652818c1eb37bc9e0c4b686873b8876c579a5e/spring-boot-starter-cloud-connectors-1.5.10.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-cloud-connectors/1.5.10.RELEASE/ea4e84f0ca5527d210399837ce42906b08f534bb/spring-boot-starter-cloud-connectors-1.5.10.RELEASE-sources.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-starter-cloud-connectors/1.5.10.RELEASE/ea4e84f0ca5527d210399837ce42906b08f534bb/spring-boot-starter-cloud-connectors-1.5.10.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
