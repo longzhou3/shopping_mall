@@ -10,34 +10,34 @@
         <result property="userId" column="userId" />
     </resultMap>
     <select id="gainMyInformation" resultMap="harvestAddressResultMap">
-        SELECT * FROM shoppingmall.harvestaddress
+        SELECT * FROM harvestaddress
         WHERE userId = #{userId}
     </select>
     <update id="updateHarvestAddress">
-        UPDATE shoppingmall.harvestaddress
+        UPDATE harvestaddress
         SET harvestAddressName = #{harvestaddressEntity.harvestAddressName},typeId = #{harvestaddressEntity.typeId}
         WHERE userId = #{userId}
     </update>
     <insert id="addHarvestAddress">
-        INSERT INTO shoppingmall.harvestaddress(harvestAddressName, harvestIsDefault, typeId, userId)
+        INSERT INTO harvestaddress(harvestAddressName, harvestIsDefault, typeId, userId)
         VALUES (#{harvestaddressEntity.harvestAddressName},#{harvestaddressEntity.harvestIsDefault},#{harvestaddressEntity.typeId},#{harvestaddressEntity.userId})
     </insert>
     <delete id="removeHarvestAddress">
-        DELETE FROM shoppingmall.harvestaddress
+        DELETE FROM harvestaddress
         WHERE id = #{id} AND userId = #{userId}
     </delete>
     <select id="selectDefaultHarvestAddress" resultMap="harvestAddressResultMap">
         SELECT *
-        FROM shoppingmall.harvestaddress
+        FROM harvestaddress
         WHERE userId = #{userId} AND harvestIsDefault = 1
     </select>
     <update id="setDefaultHarvestAddress">
-        UPDATE shoppingmall.harvestaddress
+        UPDATE harvestaddress
         SET harvestIsDefault = 1
         WHERE userId = #{userId}
     </update>
     <update id="updateDefaultHarvestAddress">
-        UPDATE shoppingmall.harvestaddress
+        UPDATE harvestaddress
         SET harvestIsDefault = 0
         WHERE userId = #{userId} AND harvestIsDefault = 1
     </update>

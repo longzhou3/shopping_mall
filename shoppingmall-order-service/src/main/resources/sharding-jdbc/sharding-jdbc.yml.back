@@ -12,11 +12,10 @@ shardingRule:
       tableStrategy:
         inline:
           shardingColumn: id
-          algorithmInlineExpression: orderfromshop${id % 2}
+          algorithmExpression: orderfromshop${id % 2}
       keyGeneratorColumnName: id
   bindingTables:
     - t_order
-  defaultKeyGeneratorClass: io.shardingjd
-  bc.core.keygen.DefaultKeyGenerator
+  defaultKeyGeneratorClass: com.zhkj.service.sharding_jdbc_key.SimpleKeyGenerator
   props:
     sql.show: true

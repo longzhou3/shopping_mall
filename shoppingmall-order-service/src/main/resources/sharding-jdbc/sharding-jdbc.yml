@@ -16,6 +16,6 @@ shardingRule:
       keyGeneratorColumnName: id
   bindingTables:
     - t_order
-  defaultKeyGeneratorClass: io.shardingjdbc.core.keygen.DefaultKeyGenerator
+  defaultKeyGeneratorClass: com.zhkj.service.sharding_jdbc_key.SimpleKeyGenerator
   props:
     sql.show: true
