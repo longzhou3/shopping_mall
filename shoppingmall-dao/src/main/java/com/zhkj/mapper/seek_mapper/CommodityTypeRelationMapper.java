@@ -4,7 +4,10 @@ import com.zhkj.entity.CommodityTypeRelationEntity;
 
 import java.util.List;
 
+/**
+ * 商品分类关系表接口
+ */
 public interface CommodityTypeRelationMapper {
-    List<CommodityTypeRelationEntity> findByCommodityId(Long id);
-    List<CommodityTypeRelationEntity> findByTypeId();
+    CommodityTypeRelationEntity findByCommodityId(Long id);
+    List<CommodityTypeRelationEntity> findByTypeId(List<Long> ids);
 }

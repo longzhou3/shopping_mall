@@ -21,7 +21,7 @@ INSERT `type`(`typeName`) VALUES ('手机数码');
 DROP TABLE IF EXISTS `discount`;
 CREATE TABLE `discount`(
   `id` INT AUTO_INCREMENT UNIQUE COMMENT '折扣id',
-  `discountPrice` DECIMAL COMMENT '折扣价格',
+  `discountPrice` DECIMAL(10,2) COMMENT '折扣价格',
   `discountIntroduce` VARCHAR(50) COMMENT '折扣介绍' DEFAULT '',
   `discountTypeId` INT COMMENT '折扣类型id_外键 Type(类型表)'DEFAULT 0
 )CHARSET 'utf8';
@@ -32,7 +32,7 @@ DROP TABLE IF EXISTS `commodity`;
 CREATE TABLE `commodity`(
   `id` INT AUTO_INCREMENT UNIQUE COMMENT '商品id',
   `commodityName` VARCHAR(20) COMMENT '商品名称',
-  `commodityPrice` DECIMAL COMMENT '商品价格',
+  `commodityPrice` DECIMAL(10,2) COMMENT '商品价格',
   `commodityIntroduce` VARCHAR(200) COMMENT '商品介绍',
   `commodityPictureUrl` VARCHAR(100) COMMENT '商品图片路径' DEFAULT '',
   `commodityNumber` INT COMMENT '商品数量'

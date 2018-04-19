@@ -5,8 +5,35 @@ public class CommodityTemplate {
     private String commodityName;
     private Double commodityPrice;
     private String commodityIntroduce;
+    private String commodityPictureUrl;
+    private String commodityNumber;
     private String typeName;
     private String discountIntroduce;
+    private Double discountPrice;
+
+    public String getCommodityPictureUrl() {
+        return commodityPictureUrl;
+    }
+
+    public void setCommodityPictureUrl(String commodityPictureUrl) {
+        this.commodityPictureUrl = commodityPictureUrl;
+    }
+
+    public String getCommodityNumber() {
+        return commodityNumber;
+    }
+
+    public void setCommodityNumber(String commodityNumber) {
+        this.commodityNumber = commodityNumber;
+    }
+
+    public Double getDiscountPrice() {
+        return discountPrice;
+    }
+
+    public void setDiscountPrice(Double discountPrice) {
+        this.discountPrice = discountPrice;
+    }
 
     public Long getId() {
         return id;

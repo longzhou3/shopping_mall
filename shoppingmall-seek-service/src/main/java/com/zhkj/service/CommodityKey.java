@@ -8,4 +8,5 @@ public class CommodityKey {
     public static final String COMMODITY_INTRODUCE="commodityIntroduce";
     public static final String TYPE_NAME="typeName";
     public static final String DISCOUNT_INTRODUCE="discountIntroduce";
+    public static final String DISCOUNT_PRICE="discountPrice";
 }

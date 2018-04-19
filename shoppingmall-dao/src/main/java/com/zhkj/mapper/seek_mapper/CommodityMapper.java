@@ -4,7 +4,10 @@ import com.zhkj.entity.CommodityEntity;
 
 import java.util.List;
 
-public interface CommdityMapper {
+/**
+ * 商品表接口
+ */
+public interface CommodityMapper {
     CommodityEntity findByCommodityId(Long id);
     List<CommodityEntity> findByCommodityId(List<Long> ids);
 }
