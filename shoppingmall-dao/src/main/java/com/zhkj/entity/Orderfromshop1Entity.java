@@ -1,38 +1,40 @@
 package com.zhkj.entity;
 
+import java.math.BigDecimal;
+
 /**
- * Created by lenovo on 2018/4/16.
+ * Created by lenovo on 2018/4/21.
  */
 public class Orderfromshop1Entity {
-    private int id;
-    private Integer feight;
-    private Integer commodityPrice;
+    private Integer id;
+    private BigDecimal feight;
+    private BigDecimal commodityPrice;
     private Integer commodityNumber;
     private Integer logisticsTypeId;
     private Integer commodityId;
     private Integer orderFromId;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public Integer getFeight() {
+    public BigDecimal getFeight() {
         return feight;
     }
 
-    public void setFeight(Integer feight) {
+    public void setFeight(BigDecimal feight) {
         this.feight = feight;
     }
 
-    public Integer getCommodityPrice() {
+    public BigDecimal getCommodityPrice() {
         return commodityPrice;
     }
 
-    public void setCommodityPrice(Integer commodityPrice) {
+    public void setCommodityPrice(BigDecimal commodityPrice) {
         this.commodityPrice = commodityPrice;
     }
 
@@ -75,7 +77,7 @@ public class Orderfromshop1Entity {
 
         Orderfromshop1Entity that = (Orderfromshop1Entity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (feight != null ? !feight.equals(that.feight) : that.feight != null) return false;
         if (commodityPrice != null ? !commodityPrice.equals(that.commodityPrice) : that.commodityPrice != null)
             return false;
@@ -91,7 +93,7 @@ public class Orderfromshop1Entity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (feight != null ? feight.hashCode() : 0);
         result = 31 * result + (commodityPrice != null ? commodityPrice.hashCode() : 0);
         result = 31 * result + (commodityNumber != null ? commodityNumber.hashCode() : 0);

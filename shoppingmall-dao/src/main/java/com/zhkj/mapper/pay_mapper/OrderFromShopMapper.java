@@ -12,7 +12,21 @@ import java.util.List;
  */
 @Repository
 public interface OrderFromShopMapper {
+     /**
+      * 添加数据库
+      * @param orderfromshop0Entity
+      */
      void insert(Orderfromshop0Entity orderfromshop0Entity);
+
+     /**
+      * 查看数据库
+      * @return
+      */
      List<Orderfromshop0Entity> selectAllToOrderfromshop0();
+
+     /**
+      * 查看数据库
+      * @return
+      */
      List<Orderfromshop1Entity> selectAllToOrderfromshop1();
 }

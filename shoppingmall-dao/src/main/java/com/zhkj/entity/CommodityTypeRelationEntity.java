@@ -1,10 +1,12 @@
 package com.zhkj.entity;
 
-public class CommodityTypeRelationEntity {
+/**
+ * Created by lenovo on 2018/4/21.
+ */
+public class CommoditytyperelationEntity {
     private int id;
     private Integer shopPrimaryTypeId;
     private Integer shopMinorTypeId;
-    private Integer commodityId;
 
     public int getId() {
         return id;
@@ -30,11 +32,27 @@ public class CommodityTypeRelationEntity {
         this.shopMinorTypeId = shopMinorTypeId;
     }
 
-    public Integer getCommodityId() {
-        return commodityId;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        CommoditytyperelationEntity that = (CommoditytyperelationEntity) o;
+
+        if (id != that.id) return false;
+        if (shopPrimaryTypeId != null ? !shopPrimaryTypeId.equals(that.shopPrimaryTypeId) : that.shopPrimaryTypeId != null)
+            return false;
+        if (shopMinorTypeId != null ? !shopMinorTypeId.equals(that.shopMinorTypeId) : that.shopMinorTypeId != null)
+            return false;
+
+        return true;
     }
 
-    public void setCommodityId(Integer commodityId) {
-        this.commodityId = commodityId;
+    @Override
+    public int hashCode() {
+        int result = id;
+        result = 31 * result + (shopPrimaryTypeId != null ? shopPrimaryTypeId.hashCode() : 0);
+        result = 31 * result + (shopMinorTypeId != null ? shopMinorTypeId.hashCode() : 0);
+        return result;
     }
 }

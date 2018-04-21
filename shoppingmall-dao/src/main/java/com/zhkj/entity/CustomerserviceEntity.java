@@ -3,7 +3,7 @@ package com.zhkj.entity;
 import java.sql.Timestamp;
 
 /**
- * Created by lenovo on 2018/4/16.
+ * Created by lenovo on 2018/4/21.
  */
 public class CustomerserviceEntity {
     private int id;
@@ -11,6 +11,7 @@ public class CustomerserviceEntity {
     private Integer demandTime;
     private Timestamp acceptanceTime;
     private Timestamp commitTime;
+    private Integer typeId;
     private Integer orderId;
     private Integer userId;
 
@@ -54,6 +55,14 @@ public class CustomerserviceEntity {
         this.commitTime = commitTime;
     }
 
+    public Integer getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Integer typeId) {
+        this.typeId = typeId;
+    }
+
     public Integer getOrderId() {
         return orderId;
     }
@@ -84,6 +93,7 @@ public class CustomerserviceEntity {
         if (acceptanceTime != null ? !acceptanceTime.equals(that.acceptanceTime) : that.acceptanceTime != null)
             return false;
         if (commitTime != null ? !commitTime.equals(that.commitTime) : that.commitTime != null) return false;
+        if (typeId != null ? !typeId.equals(that.typeId) : that.typeId != null) return false;
         if (orderId != null ? !orderId.equals(that.orderId) : that.orderId != null) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;
 
@@ -97,6 +107,7 @@ public class CustomerserviceEntity {
         result = 31 * result + (demandTime != null ? demandTime.hashCode() : 0);
         result = 31 * result + (acceptanceTime != null ? acceptanceTime.hashCode() : 0);
         result = 31 * result + (commitTime != null ? commitTime.hashCode() : 0);
+        result = 31 * result + (typeId != null ? typeId.hashCode() : 0);
         result = 31 * result + (orderId != null ? orderId.hashCode() : 0);
         result = 31 * result + (userId != null ? userId.hashCode() : 0);
         return result;

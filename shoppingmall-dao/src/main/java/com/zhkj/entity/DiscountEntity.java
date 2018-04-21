@@ -1,11 +1,13 @@
 package com.zhkj.entity;
 
+import java.math.BigDecimal;
+
 /**
- * Created by lenovo on 2018/4/16.
+ * Created by lenovo on 2018/4/21.
  */
 public class DiscountEntity {
     private int id;
-    private Integer discountPrice;
+    private BigDecimal discountPrice;
     private String discountIntroduce;
     private Integer discountTypeId;
 
@@ -17,11 +19,11 @@ public class DiscountEntity {
         this.id = id;
     }
 
-    public Integer getDiscountPrice() {
+    public BigDecimal getDiscountPrice() {
         return discountPrice;
     }
 
-    public void setDiscountPrice(Integer discountPrice) {
+    public void setDiscountPrice(BigDecimal discountPrice) {
         this.discountPrice = discountPrice;
     }
 

@@ -17,7 +17,6 @@ import org.springframework.stereotype.Service;
 public class SimpleKeyGenerator implements KeyGenerator {
     @Override
     public Number generateKey() {
-
         return SimpleKeyUtil.id;
     }
 }
