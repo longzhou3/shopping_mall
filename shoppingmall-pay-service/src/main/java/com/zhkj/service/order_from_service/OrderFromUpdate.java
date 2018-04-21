@@ -24,6 +24,7 @@ public class OrderFromUpdate implements OrderFromShopApi {
     public int updateShopApi(OrderFromVo orderFromShopVo) {
         try {
             orderFromMapper.updateOrderFrom();
+            System.out.println(1);
             return 1;
         }catch (Exception e){
             return 0;
