@@ -1,7 +1,7 @@
 package com.zhkj.compound;
 
 import com.zhkj.entity.Orderfromshop0Entity;
-import com.zhkj.mapper.pay_mapper.OrderFromShopMapper;
+import com.zhkj.mapper.order_mapper.OrderFromShopMapper;
 import com.zhkj.service.sharding_jdbc_key.SimpleKeyService;
 import com.zhkj.util.SimpleKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;

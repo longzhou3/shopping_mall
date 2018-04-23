@@ -7,5 +7,4 @@
         SET transactionNumber=#{transactionNumber},paymentTypeId=#{paymentTypeId}
         WHERE orderNumber = #{orderNumber}
     </update>
-
 </mapper>

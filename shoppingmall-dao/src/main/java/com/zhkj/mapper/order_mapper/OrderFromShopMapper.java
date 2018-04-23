@@ -1,4 +1,4 @@
-package com.zhkj.mapper.pay_mapper;
+package com.zhkj.mapper.order_mapper;
 
 import com.zhkj.entity.Orderfromshop0Entity;
 import com.zhkj.entity.Orderfromshop1Entity;

@@ -1,5 +1,6 @@
 package com.zhkj.mapper.pay_mapper;
 
+import com.zhkj.entity.OrderfromEntity;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -11,5 +12,5 @@ public interface OrderFromMapper {
      * 修改订单号
      * @return
      */
-    public void updateOrderFrom();
+    public void updateOrderFrom(OrderfromEntity orderfromEntity);
 }

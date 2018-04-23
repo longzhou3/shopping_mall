@@ -16,6 +16,86 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="shoppingmall-api" scope="PROVIDED" />
+    <orderEntry type="library" scope="TEST" name="Gradle: io.netty:netty:3.7.0.Final" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.esotericsoftware:minlog:1.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.xerial.snappy:snappy-java:1.1.2.6" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: net.jpountz.lz4:lz4:1.3.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.scala-lang:scala-library:2.11.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: net.sf.jopt-simple:jopt-simple:4.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.esotericsoftware:kryo-shaded:3.0.3" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.apache.zookeeper:zookeeper:3.4.8" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.101tec:zkclient:0.9" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.yammer.metrics:metrics-core:2.2.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.apache.kafka:kafka-clients:0.10.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.apache.kafka:kafka_2.11:0.10.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.cloud:spring-cloud-stream-codec:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.retry:spring-retry:1.2.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework:spring-messaging:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.integration:spring-integration-core:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.integration:spring-integration-jmx:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework:spring-tuple:1.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.integration:spring-integration-tuple:1.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.boot:spring-boot-starter-validation:1.5.10.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.kafka:spring-kafka:1.1.7.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.integration:spring-integration-kafka:2.1.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.cloud:spring-cloud-stream:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.cloud:spring-cloud-stream-binder-kafka-core:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: org.springframework.cloud:spring-cloud-stream-binder-kafka:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.netty:netty:3.7.0.Final" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.objenesis:objenesis:2.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.esotericsoftware:minlog:1.3.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.xerial.snappy:snappy-java:1.1.2.6" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.jpountz.lz4:lz4:1.3.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.scala-lang:scala-library:2.11.8" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: net.sf.jopt-simple:jopt-simple:4.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.esotericsoftware:kryo-shaded:3.0.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.zookeeper:zookeeper:3.4.8" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.101tec:zkclient:0.9" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.yammer.metrics:metrics-core:2.2.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.kafka:kafka-clients:0.10.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.apache.kafka:kafka_2.11:0.10.1.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.cloud:spring-cloud-stream-codec:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.retry:spring-retry:1.2.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework:spring-messaging:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.integration:spring-integration-core:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.integration:spring-integration-jmx:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework:spring-tuple:1.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.integration:spring-integration-tuple:1.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.boot:spring-boot-starter-validation:1.5.10.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.kafka:spring-kafka:1.1.7.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.integration:spring-integration-kafka:2.1.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.cloud:spring-cloud-stream:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.cloud:spring-cloud-stream-binder-kafka-core:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.springframework.cloud:spring-cloud-stream-binder-kafka:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: io.netty:netty:3.7.0.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.objenesis:objenesis:2.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.esotericsoftware:minlog:1.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.xerial.snappy:snappy-java:1.1.2.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: net.jpountz.lz4:lz4:1.3.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.scala-lang:scala-library:2.11.8" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: net.sf.jopt-simple:jopt-simple:4.9" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.esotericsoftware:kryo-shaded:3.0.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.zookeeper:zookeeper:3.4.8" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.101tec:zkclient:0.9" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.yammer.metrics:metrics-core:2.2.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.kafka:kafka-clients:0.10.1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.kafka:kafka_2.11:0.10.1.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.cloud:spring-cloud-stream-codec:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.retry:spring-retry:1.2.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-messaging:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.integration:spring-integration-core:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.integration:spring-integration-jmx:4.3.14.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework:spring-tuple:1.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.integration:spring-integration-tuple:1.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.boot:spring-boot-starter-validation:1.5.10.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.kafka:spring-kafka:1.1.7.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.integration:spring-integration-kafka:2.1.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.cloud:spring-cloud-stream:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.cloud:spring-cloud-stream-binder-kafka-core:1.3.2.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.springframework.cloud:spring-cloud-stream-binder-kafka:1.3.2.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: antlr:antlr:2.7.7" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: org.antlr:stringtemplate:3.2.1" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Gradle: io.netty:netty-common:4.0.27.Final" level="project" />
@@ -511,5 +591,8 @@
     <orderEntry type="library" scope="TEST" name="Gradle: io.netty:netty-common:4.0.27.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.antlr:stringtemplate:3.2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: antlr:antlr:2.7.7" level="project" />
+    <orderEntry type="module" module-name="shoppingmall-tools" scope="PROVIDED" />
+    <orderEntry type="module" module-name="shoppingmall-tools" scope="RUNTIME" />
+    <orderEntry type="module" module-name="shoppingmall-tools" scope="TEST" />
   </component>
 </module>

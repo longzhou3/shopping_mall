@@ -1,6 +1,8 @@
 package com.zhkj.service.order_from_service;
 
 import com.zhkj.api.order_from_shop_api.OrderFromShopApi;
+import com.zhkj.copy_properties.Conver_Type;
+import com.zhkj.entity.OrderfromEntity;
 import com.zhkj.mapper.pay_mapper.OrderFromMapper;
 import com.zhkj.vo.order_from_shop_vo.OrderFromVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +19,15 @@ public class OrderFromUpdate implements OrderFromShopApi {
 
     /**
      * 修改订单号
-     * @param orderFromShopVo
+     * @param
      * @return
      */
     @Override
-    public int updateShopApi(OrderFromVo orderFromShopVo) {
+    public int updateShopApi(OrderFromVo orderFromVo) {
         try {
-            orderFromMapper.updateOrderFrom();
-            System.out.println(1);
+            OrderfromEntity orderfromEntity=new OrderfromEntity();
+            orderfromEntity = Conver_Type.convert(orderfromEntity, orderFromVo);
+            orderFromMapper.updateOrderFrom(orderfromEntity);
             return 1;
         }catch (Exception e){
             return 0;
