@@ -28,7 +28,7 @@ public class OrderFromUpdate implements OrderFromShopApi {
             OrderfromEntity orderfromEntity=new OrderfromEntity();
             orderfromEntity = Conver_Type.convert(orderfromEntity, orderFromVo);
             orderFromMapper.updateOrderFrom(orderfromEntity);
-            System.out.println(111);
+
             return 1;
         }catch (Exception e){
             return 0;
