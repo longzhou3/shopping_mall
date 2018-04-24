@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/shopping_mall.iml" filepath="$PROJECT_DIR$/shopping_mall.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-pay-service/shopping_mall-shoppingmall-pay-service.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-pay-service/shopping_mall-shoppingmall-pay-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-activity-service/shoppingmall-activity-service.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-activity-service/shoppingmall-activity-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-after-sale-service/shoppingmall-after-sale-service.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-after-sale-service/shoppingmall-after-sale-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/shoppingmall-api/shoppingmall-api.iml" filepath="$PROJECT_DIR$/.idea/modules/shoppingmall-api/shoppingmall-api.iml" />

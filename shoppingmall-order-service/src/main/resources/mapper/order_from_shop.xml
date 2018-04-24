@@ -2,17 +2,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.zhkj.mapper.order_mapper.OrderFromShopMapper">
-<<<<<<< Updated upstream
-<insert id="insert">
-    INSERT INTO t_order(feight,commodityNumber,logisticsTypeId,commodityId,orderFromId,commodityPrice) VALUES (#{feight},#{commodityNumber},#{logisticsTypeId},#{commodityId},#{orderFromId},#{commodityPrice})
-</insert>
-<select id="selectAllToOrderfromshop1" resultType="com.zhkj.entity.Orderfromshop1Entity">
-  select * FROM orderfromshop1
-</select>
-<select id="selectAllToOrderfromshop0" resultType="com.zhkj.entity.Orderfromshop0Entity">
-  select * FROM orderfromshop0
-</select>
-=======
+
     <insert id="insertShop">
         INSERT INTO t_order(feight, commodityPrice, commodityNumber, logisticsTypeId, commodityId, orderFromId)
     VALUES (#{orderFromShop.feight},#{orderFromShop.commodityPrice},#{orderFromShop.commodityNumber},6,#{orderFromShop.commodityId},#{orderFromShop.orderFromId})
@@ -29,5 +19,4 @@
     <select id="selectByOrderFrom" resultType="com.zhkj.entity.Orderfromshop0Entity">
         SELECT * FROM t_order WHERE orderFromId = ${orderFromNumber}
     </select>
->>>>>>> Stashed changes
 </mapper>
