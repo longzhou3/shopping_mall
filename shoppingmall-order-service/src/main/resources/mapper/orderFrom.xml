@@ -8,7 +8,7 @@
     </select>
     <select id="selectByNowTime" resultType="com.zhkj.entity.OrderfromEntity">
         SELECT * FROM orderfrom
-        WHERE orderCreationTime &lt; #{nowTime} AND paymentTypeId = 1
+        WHERE orderCreationTime &lt; #{nowTime} AND paymentTypeId = 2
     </select>
     <insert id="saveOrderFrom">
        INSERT INTO orderfrom(orderNumber, orderCreationTime, orderEndTime, userId, paymentTypeId, orderfromPrice, harvestAddressId, transactionNumber)
@@ -16,7 +16,7 @@
     </insert>
     <update id="updateByOrderFromNumber">
         UPDATE orderfrom
-        SET paymentTypeId = 2
+        SET paymentTypeId = 1
         WHERE orderNumber = #{orderFromNumber}
     </update>
 </mapper>
