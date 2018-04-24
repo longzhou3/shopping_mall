@@ -8,11 +8,11 @@ import java.math.BigDecimal;
 public class Orderfromshop0Entity {
     private Integer id;
     private int feight;
-    private int commodityPrice;
+    private double commodityPrice;
     private Integer commodityNumber;
     private Integer logisticsTypeId;
     private Integer commodityId;
-    private Integer orderFromId;
+    private String orderFromId;
 
     public Integer getId() {
         return id;
@@ -30,11 +30,11 @@ public class Orderfromshop0Entity {
         this.feight = feight;
     }
 
-    public int getCommodityPrice() {
+    public double getCommodityPrice() {
         return commodityPrice;
     }
 
-    public void setCommodityPrice(int commodityPrice) {
+    public void setCommodityPrice(double commodityPrice) {
         this.commodityPrice = commodityPrice;
     }
 
@@ -62,13 +62,11 @@ public class Orderfromshop0Entity {
         this.commodityId = commodityId;
     }
 
-    public Integer getOrderFromId() {
+    public String getOrderFromId() {
         return orderFromId;
     }
 
-    public void setOrderFromId(Integer orderFromId) {
+    public void setOrderFromId(String orderFromId) {
         this.orderFromId = orderFromId;
     }
-
-
 }

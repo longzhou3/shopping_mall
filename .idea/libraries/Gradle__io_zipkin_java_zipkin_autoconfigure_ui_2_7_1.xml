@@ -2,10 +2,12 @@
   <library name="Gradle: io.zipkin.java:zipkin-autoconfigure-ui:2.7.1">
     <CLASSES>
       <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-ui/2.7.1/3a8da92b566be821c1ac18f6e63f7d79aaeccac5/zipkin-autoconfigure-ui-2.7.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-ui/2.7.1/3a8da92b566be821c1ac18f6e63f7d79aaeccac5/zipkin-autoconfigure-ui-2.7.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-ui/2.7.1/ade7cb5ef903c3d0b52247be05b7c8cda92d14be/zipkin-autoconfigure-ui-2.7.1-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-autoconfigure-ui/2.7.1/ade7cb5ef903c3d0b52247be05b7c8cda92d14be/zipkin-autoconfigure-ui-2.7.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -3,18 +3,14 @@ package com.zhkj.compound;
 import com.alibaba.fastjson.JSON;
 import com.zhkj.dto.order_dto.Clearing_Dto;
 import com.zhkj.dto.order_dto.HarvestaddressEntity_Dto;
+import com.zhkj.dto.order_dto.OrderFrom_Dto;
 import com.zhkj.dto.order_dto.Order_Dto;
-import com.zhkj.service.Data_Service;
-import com.zhkj.service.DiscountService;
-import com.zhkj.service.Encrypt_Service;
-import com.zhkj.service.HarvestAddressService;
-import com.zhkj.vo.order_vo.Clearing_Vo;
-import com.zhkj.vo.order_vo.Discount_Vo;
-import com.zhkj.vo.order_vo.Harvestaddress_Vo;
-import com.zhkj.vo.order_vo.Order_Vo;
+import com.zhkj.service.*;
+import com.zhkj.vo.order_vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -28,6 +24,8 @@ public class Clearing_Controller {
     private Encrypt_Service encrypt_service;
     @Autowired
     private HarvestAddressService harvestAddressService;
+    @Autowired
+    private OrderFromService orderFromService;
 @Autowired
     DiscountService discountService;
     /**
@@ -135,4 +133,32 @@ public class Clearing_Controller {
         return discountService.calculatePrice(discount_vo);
     }
 
+    /**
+     * 查询特定用户订单
+     * @param json
+     * {"userId": "1"}
+     * @return 特定用户的订单
+     */
+    @RequestMapping(value = "selectOrderFrom/json/{json}",method = RequestMethod.GET)
+    public HashMap<String,Object> selectOrderFrom(@PathVariable("json")String json){
+        OrderFrom_Vo orderFrom_vo = JSON.parseObject(json,OrderFrom_Vo.class);
+        HashMap<String,Object> map = orderFromService.selectUserOrderFrom(orderFrom_vo);
+        return map;
+    }
+
+    /**
+     * 添加订单
+     * @param json
+     * {"commodityId": [{"feight": "0","commodityPrice": "15","commodityNumber": "2","commodityId": "1"},{"feight": "5","commodityPrice": "80","commodityNumber": "2","commodityId": "2"}],"userId": "1","orderFromPrice": "200","harvestAddressId": "1"}
+     * @return 是否成功
+     */
+    @RequestMapping(value = "additionOrderFrom/json/{json}",method = RequestMethod.GET)
+    public String additionOrderFrom(@PathVariable("json")String json){
+        OrderFrom_Vo orderFrom_vo = JSON.parseObject(json,OrderFrom_Vo.class);
+        boolean result = orderFromService.additionOrderFrom(orderFrom_vo);
+        if (result){
+            return "成功";
+        }
+        return "失败";
+    }
 }
