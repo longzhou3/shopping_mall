@@ -1,9 +1,12 @@
 package com.zhkj.service.order_from_service;
 
 import com.zhkj.api.order_from_shop_api.OrderFromShopApi;
+<<<<<<< Updated upstream
 import com.zhkj.copy_properties.Conver_Type;
 import com.zhkj.entity.OrderfromEntity;
 import com.zhkj.mapper.pay_mapper.OrderFromMapper;
+=======
+>>>>>>> Stashed changes
 import com.zhkj.vo.order_from_shop_vo.OrderFromVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

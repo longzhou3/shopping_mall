@@ -23,7 +23,7 @@ public class TestService {
         SimpleKeyUtil.id=simpleKeyService.getKey();
         Orderfromshop0Entity orderfromshop0Entity=new Orderfromshop0Entity();
         orderfromshop0Entity.setLogisticsTypeId(1);
-        orderfromshop0Entity.setOrderFromId(1);
+        orderfromshop0Entity.setOrderFromId("1");
         orderfromshop0Entity.setFeight(1);
         orderfromshop0Entity.setCommodityPrice(1);
         orderfromshop0Entity.setCommodityNumber(1);

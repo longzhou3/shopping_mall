@@ -19,6 +19,20 @@ public interface OrderFromShopMapper {
      void insert(Orderfromshop0Entity orderfromshop0Entity);
 
      /**
+      * 添加商品
+      * @param orderfromshop0Entity
+      * @return
+      */
+     void insertShop(@Param("orderFromShop") Orderfromshop0Entity orderfromshop0Entity);
+
+     /**
+      * 根据订单号查询商品
+      * @param orderFromNumber 订单号
+      * @return 查询的商品
+      */
+     List<Orderfromshop0Entity> selectByOrderFrom(@Param("orderFromNumber") String orderFromNumber);
+
+     /**
       * 查看数据库
       * @return
       */
