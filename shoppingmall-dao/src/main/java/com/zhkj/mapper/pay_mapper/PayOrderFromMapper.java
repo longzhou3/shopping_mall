@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
  * 支付成功后订单操作
  */
 @Repository
-public interface OrderFromMapper {
+public interface PayOrderFromMapper {
     /**
      * 修改订单号
      * @return

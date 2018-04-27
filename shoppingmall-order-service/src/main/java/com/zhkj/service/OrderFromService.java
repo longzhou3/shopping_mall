@@ -12,6 +12,7 @@ import com.zhkj.service.sharding_jdbc_key.SimpleKeyService;
 import com.zhkj.util.SimpleKeyUtil;
 import com.zhkj.vo.order_vo.OrderFromShop_Vo;
 import com.zhkj.vo.order_vo.OrderFrom_Vo;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,7 +34,7 @@ public class OrderFromService implements OrderFromService_Api {
     private OrderFromShopMapper orderFromShopMapper;
     @Autowired
     private SimpleKeyService simpleKeyService;
-
+    static Logger logger = Logger.getLogger(OrderFromService.class);
     @Override
     public boolean additionOrderFrom(OrderFrom_Vo orderFrom_vo) {
         OrderFrom_Dto orderFrom_dto = new OrderFrom_Dto();
@@ -42,24 +43,30 @@ public class OrderFromService implements OrderFromService_Api {
         String orderFromNumber = generateOrderNumber();
         if(orderFrom_vo != null){
             if(!(orderFromNumber.equals("") && orderFromNumber == null)){
-                OrderfromEntity orderfromEntity = new OrderfromEntity();
-                orderFrom_dto.setOrderCreationTime(new Timestamp(date.getTime()));
-                Timestamp endTime = new Timestamp(date.getTime());
-                endTime.setHours(endTime.getHours() + 2);
-                orderFrom_dto.setOrderEndTime(endTime);
-                orderFrom_dto.setOrderNumber(orderFromNumber);
-                orderFrom_dto.setUserId(orderFrom_vo.getUserId());
-                orderFrom_dto.setHarvestAddressId(orderFrom_vo.getHarvestAddressId());
-                orderFrom_dto.setOrderfromPrice(orderFrom_vo.getOrderFromPrice());
-                orderfromEntity = Conver_Type.convert(orderfromEntity,orderFrom_dto);
-                orderFromMapper.saveOrderFrom(orderfromEntity);
-                result = true;
+                try {
+                    OrderfromEntity orderfromEntity = new OrderfromEntity();
+                    orderFrom_dto.setOrderCreationTime(new Timestamp(date.getTime()));
+                    Timestamp endTime = new Timestamp(date.getTime());
+                    endTime.setHours(endTime.getHours() + 2);
+                    orderFrom_dto.setOrderEndTime(endTime);
+                    orderFrom_dto.setOrderNumber(orderFromNumber);
+                    orderFrom_dto.setUserId(orderFrom_vo.getUserId());
+                    orderFrom_dto.setHarvestAddressId(orderFrom_vo.getHarvestAddressId());
+                    orderFrom_dto.setOrderfromPrice(orderFrom_vo.getOrderFromPrice());
+                    orderfromEntity = Conver_Type.convert(orderfromEntity,orderFrom_dto);
+                    orderFromMapper.saveOrderFrom(orderfromEntity);
+                    result = true;
+                    if(result){
+                        additionOrderFromShop(orderFrom_vo.getCommodityId(),orderFromNumber);
+                        return true;
+                    }
+                }catch (Exception e){
+                    logger.error("添加订单失败，错误信息"+e.getMessage()+"参数:"+orderFrom_vo);
+                }
+
             }
         }
-        if(result){
-            additionOrderFromShop(orderFrom_vo.getCommodityId(),orderFromNumber);
-            return true;
-        }
+
         return false;
     }
 

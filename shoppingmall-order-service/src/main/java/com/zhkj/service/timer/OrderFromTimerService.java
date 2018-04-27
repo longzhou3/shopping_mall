@@ -2,6 +2,8 @@ package com.zhkj.service.timer;
 
 import com.zhkj.entity.OrderfromEntity;
 import com.zhkj.mapper.order_mapper.OrderFromMapper;
+
+import com.zhkj.service.HarvestAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -9,15 +11,16 @@ import org.springframework.stereotype.Component;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import org.apache.log4j.Logger;
 
 /**
  *  定时修改数据库
- *  需要日志
  */
 @Configuration
 @Component
 @EnableScheduling
 public class OrderFromTimerService{
+    static Logger logger = Logger.getLogger(OrderFromTimerService.class);
     @Autowired
     private OrderFromMapper orderFromMapper;
     public void execute() {
@@ -30,7 +33,7 @@ public class OrderFromTimerService{
                     if(nowDate.compareTo(s.getOrderEndTime()) == 1){
                         // 记录修改状态
                         orderFromMapper.updateByOrderFromNumber(s.getOrderNumber());
-                        System.out.printf("修改%s订单成功%n",s.getOrderNumber());
+                        logger.info("订单"+s.getOrderNumber()+"已过期:修改订单成功");
                     }
                 }
         );

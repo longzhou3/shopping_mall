@@ -9,6 +9,8 @@ import com.zhkj.entity.UserEntity;
 
 import com.zhkj.mapper.order_mapper.HarvestAddressMapper;
 import com.zhkj.vo.order_vo.Harvestaddress_Vo;
+import org.apache.log4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,24 +18,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  收货地址变动类
- *  实现接口
- *      HarvestAddressService_Api 所属 com.zhkj.api
+ * 收货地址变动类
+ * 实现接口
+ * HarvestAddressService_Api 所属 com.zhkj.api
  */
 @Service
 public class HarvestAddressService implements HarvestAddressService_Api {
     @Autowired
     private HarvestAddressMapper harvestAddressMapper;
+    static Logger logger = Logger.getLogger(HarvestAddressService.class);
 
     @Override
     public boolean updateHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
         boolean result = false;
-        if(judgeUserIdAndAddressId(harvesaddress_vo.getHarvestAddress().getUserId(),harvesaddress_vo.getHarvestAddress().getId())){
-            if(judgeUserIdAndDto(harvesaddress_vo.getHarvestAddress().getUserId(),harvesaddress_vo.getHarvestAddress())){
-                HarvestaddressEntity harvestaddressEntity = new HarvestaddressEntity();
-                harvestaddressEntity =Conver_Type.convert(harvestaddressEntity,harvesaddress_vo.getHarvestAddress());
-                harvestAddressMapper.updateHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(),harvestaddressEntity);
-                result = true;
+        if (judgeUserIdAndAddressId(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId())) {
+            if (judgeUserIdAndDto(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress())) {
+                try {
+                    HarvestaddressEntity harvestaddressEntity = new HarvestaddressEntity();
+                    harvestaddressEntity = Conver_Type.convert(harvestaddressEntity, harvesaddress_vo.getHarvestAddress());
+                    harvestAddressMapper.updateHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvestaddressEntity);
+                    result = true;
+                } catch (Exception e) {
+                    logger.error("修改地址失败，错误信息" + e.getMessage() + "参数:" + harvesaddress_vo);
+                }
+
             }
         }
         return result;
@@ -42,11 +50,16 @@ public class HarvestAddressService implements HarvestAddressService_Api {
     @Override
     public boolean addHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
         boolean result = false;
+
         if (judgeUserIdAndDto(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress())) {
-            HarvestaddressEntity harvestaddressEntity = new HarvestaddressEntity();
-            harvestaddressEntity = Conver_Type.convert(harvestaddressEntity, harvesaddress_vo.getHarvestAddress());
-            harvestAddressMapper.addHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvestaddressEntity);
-            result = true;
+            try {
+                HarvestaddressEntity harvestaddressEntity = new HarvestaddressEntity();
+                harvestaddressEntity = Conver_Type.convert(harvestaddressEntity, harvesaddress_vo.getHarvestAddress());
+                harvestAddressMapper.addHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvestaddressEntity);
+                result = true;
+            } catch (Exception e) {
+                logger.error("添加地址失败，错误信息" + e.getMessage() + "参数:" + harvesaddress_vo);
+            }
         }
         return result;
     }
@@ -55,8 +68,13 @@ public class HarvestAddressService implements HarvestAddressService_Api {
     public boolean removeHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
         boolean result = false;
         if (judgeUserIdAndAddressId(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId())) {
-            harvestAddressMapper.removeHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId());
-            result = true;
+            try {
+                harvestAddressMapper.removeHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId());
+                result = true;
+            } catch (Exception e) {
+                logger.error("删除地址失败，错误信息" + e.getMessage() + "参数:" + harvesaddress_vo);
+            }
+
         }
         return result;
     }
@@ -65,10 +83,15 @@ public class HarvestAddressService implements HarvestAddressService_Api {
     public boolean setDefaultHarvestAddress(Harvestaddress_Vo harvesaddress_vo) {
         boolean result = false;
         if (judgeUserIdAndAddressId(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId())) {
-            if(harvestAddressMapper.selectDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId()) != null){
-                harvestAddressMapper.updateDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId());
-                result = true;
-            }else {
+            if (harvestAddressMapper.selectDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId()) != null) {
+                try {
+                    harvestAddressMapper.updateDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId());
+                    result = true;
+                } catch (Exception e) {
+                    logger.error("修改默认地址失败，错误信息" + e.getMessage() + "参数:" + harvesaddress_vo);
+                }
+
+            } else {
                 harvestAddressMapper.setDefaultHarvestAddress(harvesaddress_vo.getHarvestAddress().getUserId(), harvesaddress_vo.getHarvestAddress().getId());
                 result = true;
             }
@@ -79,22 +102,28 @@ public class HarvestAddressService implements HarvestAddressService_Api {
     @Override
     public List<HarvestaddressEntity_Dto> gainMyInformation(Harvestaddress_Vo harvesaddress_vo) {
         List<HarvestaddressEntity_Dto> listEntityDto = new ArrayList<>();
-        if(harvesaddress_vo.getHarvestAddress().getUserId() > 0) {
-            List<HarvestaddressEntity> listEntity = harvestAddressMapper.gainMyInformation(harvesaddress_vo.getHarvestAddress().getUserId());
-            listEntityDto = Conver_Type.convertToList(listEntityDto, listEntity, "com.zhkj.dto.order_dto.HarvestaddressEntity_Dto");
+        if (harvesaddress_vo.getHarvestAddress().getUserId() > 0) {
+            try {
+                List<HarvestaddressEntity> listEntity = harvestAddressMapper.gainMyInformation(harvesaddress_vo.getHarvestAddress().getUserId());
+                listEntityDto = Conver_Type.convertToList(listEntityDto, listEntity, "com.zhkj.dto.order_dto.HarvestaddressEntity_Dto");
+            } catch (Exception e) {
+                logger.error("查询地址失败，错误信息" + e.getMessage() + "参数:" + harvesaddress_vo);
+            }
         }
         return listEntityDto;
     }
+
     /**
      * 判断dto或userId异常
+     *
      * @param userId 所属用户
-     * @param dto 收货地址信息
+     * @param dto    收货地址信息
      * @return 是否异常
      */
-    private boolean judgeUserIdAndDto(Integer userId,HarvestaddressEntity_Dto dto){
+    private boolean judgeUserIdAndDto(Integer userId, HarvestaddressEntity_Dto dto) {
         boolean result = false;
-        if(dto != null){
-            if(userId != null && userId > 0){
+        if (dto != null) {
+            if (userId != null && userId > 0) {
                 result = true;
             }
         }
@@ -103,14 +132,15 @@ public class HarvestAddressService implements HarvestAddressService_Api {
 
     /**
      * 判断userId 或 addressId 是否异常
-     * @param userId 所属用户
+     *
+     * @param userId    所属用户
      * @param addressId 地址id
      * @return 是否异常
      */
-    private boolean judgeUserIdAndAddressId(Integer userId,Integer addressId){
+    private boolean judgeUserIdAndAddressId(Integer userId, Integer addressId) {
         boolean result = false;
-        if(userId != null && userId > 0){
-            if(addressId != null && addressId > 0){
+        if (userId != null && userId > 0) {
+            if (addressId != null && addressId > 0) {
                 result = true;
             }
         }

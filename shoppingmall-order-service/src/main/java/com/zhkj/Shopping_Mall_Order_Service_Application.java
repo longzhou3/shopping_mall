@@ -1,6 +1,7 @@
 package com.zhkj;
 
 import com.zhkj.service.timer.CreateTimer;
+import org.apache.log4j.Logger;
 import org.mybatis.spring.annotation.MapperScan;
 import org.quartz.Scheduler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 public class Shopping_Mall_Order_Service_Application {
 
     public static void main(String[] args) {
-     SpringApplication.run(Shopping_Mall_Order_Service_Application.class,args);
 
+     SpringApplication.run(Shopping_Mall_Order_Service_Application.class,args);
     }
 }

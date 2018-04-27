@@ -1,6 +1,7 @@
 package com.zhkj.service.sharding_jdbc_key;
 import com.zhkj.api.order_api.SimpleKey_Api;
 import com.zhkj.mapper.order_mapper.OrderFromShopMapper;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class SimpleKeyService implements SimpleKey_Api {
      @Autowired
     private OrderFromShopMapper orderFromShopMapper;
+
 
     /**
      * 查询最后一列id
