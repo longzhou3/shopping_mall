@@ -2,10 +2,12 @@
   <library name="Gradle: io.zipkin.java:zipkin-server:2.4.1">
     <CLASSES>
       <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.java/zipkin-server/2.4.1/50cf9538ad22d85b764247a45d7fce676aaee118/zipkin-server-2.4.1.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-server/2.4.1/50cf9538ad22d85b764247a45d7fce676aaee118/zipkin-server-2.4.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.java/zipkin-server/2.4.1/f673740cd9368b41b7511fb1d6face57278a6108/zipkin-server-2.4.1-sources.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-server/2.4.1/f673740cd9368b41b7511fb1d6face57278a6108/zipkin-server-2.4.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

@@ -2,10 +2,12 @@
   <library name="Gradle: org.springframework.cloud:spring-cloud-sleuth-zipkin-stream:1.3.3.RELEASE">
     <CLASSES>
       <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-sleuth-zipkin-stream/1.3.3.RELEASE/6c35753eb869cd5bda002cdc7b68bb71e1188b32/spring-cloud-sleuth-zipkin-stream-1.3.3.RELEASE.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-sleuth-zipkin-stream/1.3.3.RELEASE/6c35753eb869cd5bda002cdc7b68bb71e1188b32/spring-cloud-sleuth-zipkin-stream-1.3.3.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-sleuth-zipkin-stream/1.3.3.RELEASE/ebd7510d0f1ed1e383f7cb5d11892978c76cad26/spring-cloud-sleuth-zipkin-stream-1.3.3.RELEASE-sources.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/org.springframework.cloud/spring-cloud-sleuth-zipkin-stream/1.3.3.RELEASE/ebd7510d0f1ed1e383f7cb5d11892978c76cad26/spring-cloud-sleuth-zipkin-stream-1.3.3.RELEASE-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

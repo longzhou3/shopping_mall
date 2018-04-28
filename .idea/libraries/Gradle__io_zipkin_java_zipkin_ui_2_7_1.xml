@@ -2,6 +2,7 @@
   <library name="Gradle: io.zipkin.java:zipkin-ui:2.7.1">
     <CLASSES>
       <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.java/zipkin-ui/2.7.1/d7dc64af0b70e783a82f44f77e633492bb9bdb2a/zipkin-ui-2.7.1.jar!/" />
+      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-ui/2.7.1/d7dc64af0b70e783a82f44f77e633492bb9bdb2a/zipkin-ui-2.7.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
