@@ -12,8 +12,6 @@ import org.springframework.stereotype.Service;
 public class SimpleKeyService implements SimpleKey_Api {
      @Autowired
     private OrderFromShopMapper orderFromShopMapper;
-
-
     /**
      * 查询最后一列id
      * @return

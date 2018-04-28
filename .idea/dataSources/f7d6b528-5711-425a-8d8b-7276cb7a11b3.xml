@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bookkeeping">
+      <Current>1</Current>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="orders"/>
+    <schema id="6" parent="1" name="performance_schema"/>
+    <schema id="7" parent="1" name="questionnaire"/>
+    <schema id="8" parent="1" name="student"/>
+    <schema id="9" parent="1" name="sys"/>
+    <schema id="10" parent="1" name="shoppingmall">
+      <Visible>1</Visible>
+    </schema>
+    <table id="11" parent="10" name="authentication"/>
+    <table id="12" parent="10" name="commodity"/>
+    <table id="13" parent="10" name="commodityevaluation"/>
+    <table id="14" parent="10" name="commoditytyperelation"/>
+    <table id="15" parent="10" name="customerservice"/>
+    <table id="16" parent="10" name="discount"/>
+    <table id="17" parent="10" name="discounttype"/>
+    <table id="18" parent="10" name="harvestaddress"/>
+    <table id="19" parent="10" name="mycollect"/>
+    <table id="20" parent="10" name="orderfrom"/>
+    <table id="21" parent="10" name="orderfromshop0"/>
+    <table id="22" parent="10" name="orderfromshop1"/>
+    <table id="23" parent="10" name="orderfromtype"/>
+    <table id="24" parent="10" name="promotionitem"/>
+    <table id="25" parent="10" name="shoppingcart"/>
+    <table id="26" parent="10" name="specificationsdetailed"/>
+    <table id="27" parent="10" name="specificationsrelation"/>
+    <table id="28" parent="10" name="specificationstopic"/>
+    <table id="29" parent="10" name="transactionrecord"/>
+    <table id="30" parent="10" name="type"/>
+    <table id="31" parent="10" name="user"/>
+    <table id="32" parent="10" name="userdiscount"/>
+    <column id="33" parent="11" name="id">
+      <Position>1</Position>
+      <Comment>实名认证id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="11" name="userName">
+      <Position>2</Position>
+      <Comment>用户真实姓名</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="35" parent="11" name="userAboutAddress">
+      <Position>3</Position>
+      <Comment>用户大概地址</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="36" parent="11" name="userAddress">
+      <Position>4</Position>
+      <Comment>用户真实地址</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="37" parent="11" name="userPhoneNumber">
+      <Position>5</Position>
+      <Comment>用户真实电话</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="38" parent="11" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="39" parent="11" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="40" parent="12" name="id">
+      <Position>1</Position>
+      <Comment>商品id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="12" name="commodityName">
+      <Position>2</Position>
+      <Comment>商品名称</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="42" parent="12" name="commodityIntroduce">
+      <Position>3</Position>
+      <Comment>商品介绍</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="43" parent="12" name="bigPictureUrl">
+      <Position>4</Position>
+      <Comment>商品大图片路径</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="44" parent="12" name="commodityTypeRelationId">
+      <Position>5</Position>
+      <Comment>商品分类id_外键 commodityTypeRelation(商品分类关系表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="45" parent="12" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="12" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="47" parent="13" name="id">
+      <Position>1</Position>
+      <Comment>商品评价id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="13" name="evaluationTime">
+      <Position>2</Position>
+      <Comment>商品评价时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="49" parent="13" name="evaluationContent">
+      <Position>3</Position>
+      <Comment>商品评价内容</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="50" parent="13" name="evaluationTypeId">
+      <Position>4</Position>
+      <Comment>商品评价状态_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="51" parent="13" name="userId">
+      <Position>5</Position>
+      <Comment>所属用户_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="52" parent="13" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="13" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="54" parent="14" name="id">
+      <Position>1</Position>
+      <Comment>商品分类关系id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="55" parent="14" name="shopPrimaryTypeId">
+      <Position>2</Position>
+      <Comment>商品一级分类_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="56" parent="14" name="shopMinorTypeId">
+      <Position>3</Position>
+      <Comment>商品二级分类_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="57" parent="14" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="58" parent="14" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="59" parent="15" name="id">
+      <Position>1</Position>
+      <Comment>售后id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="60" parent="15" name="causeOfReturn">
+      <Position>2</Position>
+      <Comment>退货原因</Comment>
+      <DataType>varchar(200)|0</DataType>
+    </column>
+    <column id="61" parent="15" name="demandTime">
+      <Position>3</Position>
+      <Comment>需求时间</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="62" parent="15" name="acceptanceTime">
+      <Position>4</Position>
+      <Comment>受理时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="63" parent="15" name="commitTime">
+      <Position>5</Position>
+      <Comment>提交时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="64" parent="15" name="typeId">
+      <Position>6</Position>
+      <Comment>类型id_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="65" parent="15" name="orderId">
+      <Position>7</Position>
+      <Comment>订单id_外键 OrderFrom(订单表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="66" parent="15" name="userId">
+      <Position>8</Position>
+      <Comment>用户id_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="67" parent="15" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="68" parent="15" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="69" parent="16" name="id">
+      <Position>1</Position>
+      <Comment>折扣id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="70" parent="16" name="discountPrice">
+      <Position>2</Position>
+      <Comment>折扣价格</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="71" parent="16" name="discountIntroduce">
+      <Position>3</Position>
+      <Comment>折扣介绍</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="72" parent="16" name="discountTypeId">
+      <Position>4</Position>
+      <Comment>折扣类型id_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="73" parent="16" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="74" parent="16" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="75" parent="17" name="id">
+      <Position>1</Position>
+      <Comment>类型id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="76" parent="17" name="typeName">
+      <Position>2</Position>
+      <Comment>类型名称</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="77" parent="17" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="78" parent="17" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="79" parent="18" name="id">
+      <Position>1</Position>
+      <Comment>收货地址id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="80" parent="18" name="harvestAddressName">
+      <Position>2</Position>
+      <Comment>收货地址</Comment>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="81" parent="18" name="harvestIsDefault">
+      <Position>3</Position>
+      <Comment>该收货地址是否默认</Comment>
+      <DataType>int(11)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="82" parent="18" name="typeId">
+      <Position>4</Position>
+      <Comment>收货地址类型_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="83" parent="18" name="userId">
+      <Position>5</Position>
+      <Comment>用户id_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="84" parent="18" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="85" parent="18" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="86" parent="19" name="id">
+      <Position>1</Position>
+      <Comment>我的收藏id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="87" parent="19" name="userId">
+      <Position>2</Position>
+      <Comment>用户id_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="88" parent="19" name="commdityId">
+      <Position>3</Position>
+      <Comment>商品id_外键 Commdity(商品表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="89" parent="19" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="90" parent="19" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="91" parent="20" name="id">
+      <Position>1</Position>
+      <Comment>订单id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="92" parent="20" name="orderNumber">
+      <Position>2</Position>
+      <Comment>订单编号</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="93" parent="20" name="orderCreationTime">
+      <Position>3</Position>
+      <Comment>订单创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="94" parent="20" name="orderEndTime">
+      <Position>4</Position>
+      <Comment>订单结束时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="95" parent="20" name="userId">
+      <Position>5</Position>
+      <Comment>用户编号_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="96" parent="20" name="paymentTypeId">
+      <Position>6</Position>
+      <Comment>订单支付状态_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="97" parent="20" name="harvestAddressId">
+      <Position>8</Position>
+      <Comment>订单收货地址id_外键 harvestAddress</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="98" parent="20" name="orderfromPrice">
+      <Position>7</Position>
+      <Comment>订单总价</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="99" parent="20" name="transactionNumber">
+      <Position>9</Position>
+      <Comment>支付宝交易号</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="100" parent="20" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="101" parent="20" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="102" parent="21" name="id">
+      <Position>1</Position>
+      <Comment>订单商品id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="103" parent="21" name="feight">
+      <Position>2</Position>
+      <Comment>运费</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="104" parent="21" name="commodityPrice">
+      <Position>3</Position>
+      <Comment>商品实际购买价格</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="105" parent="21" name="commodityNumber">
+      <Position>4</Position>
+      <Comment>商品实际购买数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="106" parent="21" name="logisticsTypeId">
+      <Position>5</Position>
+      <Comment>订单商品物流状态_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="107" parent="21" name="commodityId">
+      <Position>6</Position>
+      <Comment>订单商品id_外键 commodity(商品表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="108" parent="21" name="orderFromId">
+      <Position>7</Position>
+      <Comment>订单id_外键 orderFrom(订单表)</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="109" parent="21" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="110" parent="21" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="111" parent="22" name="id">
+      <Position>1</Position>
+      <Comment>订单商品id</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="112" parent="22" name="feight">
+      <Position>2</Position>
+      <Comment>运费</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="113" parent="22" name="commodityPrice">
+      <Position>3</Position>
+      <Comment>商品实际购买价格</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="114" parent="22" name="commodityNumber">
+      <Position>4</Position>
+      <Comment>商品实际购买数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="115" parent="22" name="logisticsTypeId">
+      <Position>5</Position>
+      <Comment>订单商品物流状态_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="116" parent="22" name="commodityId">
+      <Position>6</Position>
+      <Comment>订单商品信息_外键 commodity(商品表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="117" parent="22" name="orderFromId">
+      <Position>7</Position>
+      <Comment>订单id_外键 orderFrom(订单表)</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="118" parent="22" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="119" parent="22" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="120" parent="23" name="id">
+      <Position>1</Position>
+      <Comment>类型id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="121" parent="23" name="typeName">
+      <Position>2</Position>
+      <Comment>类型名称</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="122" parent="23" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="123" parent="23" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="124" parent="24" name="id">
+      <Position>1</Position>
+      <Comment>促销商品id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="125" parent="24" name="startTime">
+      <Position>2</Position>
+      <Comment>促销开始时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="126" parent="24" name="endTime">
+      <Position>3</Position>
+      <Comment>促销结束时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="127" parent="24" name="discountPrice">
+      <Position>4</Position>
+      <Comment>商品促销价格</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="128" parent="24" name="commodityNumber">
+      <Position>5</Position>
+      <Comment>促销商品数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="129" parent="24" name="commodityId">
+      <Position>6</Position>
+      <Comment>商品原信息_外键 Commdity(商品表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="130" parent="24" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="131" parent="24" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="132" parent="25" name="id">
+      <Position>1</Position>
+      <Comment>购物车id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="133" parent="25" name="commdityNumber">
+      <Position>2</Position>
+      <Comment>商品数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="134" parent="25" name="commdityPrice">
+      <Position>3</Position>
+      <Comment>商品价格</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="135" parent="25" name="commdityId">
+      <Position>4</Position>
+      <Comment>商品id_外键 Commdity(商品表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="136" parent="25" name="userId">
+      <Position>5</Position>
+      <Comment>用户id_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="137" parent="25" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="138" parent="25" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="139" parent="26" name="id">
+      <Position>1</Position>
+      <Comment>商品规格详细id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="140" parent="26" name="name">
+      <Position>2</Position>
+      <Comment>商品规格详细名称</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="141" parent="26" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="142" parent="26" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="143" parent="27" name="id">
+      <Position>1</Position>
+      <Comment>商品规格关系id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="144" parent="27" name="commodityNumber">
+      <Position>2</Position>
+      <Comment>商品数量</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="145" parent="27" name="commodityPrice">
+      <Position>3</Position>
+      <Comment>商品价格</Comment>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="146" parent="27" name="commodityId">
+      <Position>4</Position>
+      <Comment>商品id_外键 commodity(商品表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="147" parent="27" name="smallPictureUrl">
+      <Position>5</Position>
+      <Comment>商品小图片路径</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="148" parent="27" name="typeId">
+      <Position>6</Position>
+      <Comment>商品促销状态_外键 Type(类型表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="149" parent="27" name="speciTopicId">
+      <Position>7</Position>
+      <Comment>商品规格标题_外键 specificationsTopic(商品规格标题表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="150" parent="27" name="speciDetailedId">
+      <Position>8</Position>
+      <Comment>商品规格详细_外键 sepcificationsDetailed(商品规格详细表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="151" parent="27" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="152" parent="27" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="153" parent="28" name="id">
+      <Position>1</Position>
+      <Comment>商品规格标题id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="154" parent="28" name="name">
+      <Position>2</Position>
+      <Comment>商品规格标题名称</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <index id="155" parent="28" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="156" parent="28" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="157" parent="29" name="id">
+      <Position>1</Position>
+      <Comment>交易记录id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="158" parent="29" name="creationTime">
+      <Position>2</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="159" parent="29" name="orderId">
+      <Position>3</Position>
+      <Comment>订单id_外键 OrderFrom(订单表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="160" parent="29" name="userId">
+      <Position>4</Position>
+      <Comment>用户id_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="161" parent="29" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="162" parent="29" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="163" parent="30" name="id">
+      <Position>1</Position>
+      <Comment>类型id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="164" parent="30" name="typeName">
+      <Position>2</Position>
+      <Comment>类型名称</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="165" parent="30" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="166" parent="30" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="167" parent="31" name="id">
+      <Position>1</Position>
+      <Comment>用户id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="168" parent="31" name="nickName">
+      <Position>2</Position>
+      <Comment>用户昵称</Comment>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="169" parent="31" name="loginName">
+      <Position>3</Position>
+      <Comment>登录名称</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="170" parent="31" name="logingPassword">
+      <Position>4</Position>
+      <Comment>登录密码</Comment>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="171" parent="31" name="headPortraitUrl">
+      <Position>5</Position>
+      <Comment>头像路径</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="172" parent="31" name="userTypeId">
+      <Position>6</Position>
+      <Comment>用户账号类型</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="173" parent="31" name="authenticationId">
+      <Position>7</Position>
+      <Comment>实名认证id_外键 Authentication(实名认证表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="174" parent="31" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="175" parent="31" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="176" parent="32" name="id">
+      <Position>1</Position>
+      <Comment>id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="177" parent="32" name="userId">
+      <Position>2</Position>
+      <Comment>用户id_外键 User(用户表)</Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="178" parent="32" name="discountId">
+      <Position>3</Position>
+      <Comment>折扣id_外键 discount(折扣表) </Comment>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="179" parent="32" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="180" parent="32" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
