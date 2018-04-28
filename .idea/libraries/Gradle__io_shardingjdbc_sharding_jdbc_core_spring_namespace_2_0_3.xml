@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: io.shardingjdbc:sharding-jdbc-core-spring-namespace:2.0.3">
     <CLASSES>
-      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.shardingjdbc/sharding-jdbc-core-spring-namespace/2.0.3/1bba768066431a91f227e5a3dcb10b079b9f6c54/sharding-jdbc-core-spring-namespace-2.0.3.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.shardingjdbc/sharding-jdbc-core-spring-namespace/2.0.3/1bba768066431a91f227e5a3dcb10b079b9f6c54/sharding-jdbc-core-spring-namespace-2.0.3.jar!/" />
+      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.shardingjdbc/sharding-jdbc-core-spring-namespace/2.0.3/1bba768066431a91f227e5a3dcb10b079b9f6c54/sharding-jdbc-core-spring-namespace-2.0.3.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.shardingjdbc/sharding-jdbc-core-spring-namespace/2.0.3/bc9e4124857d7778be5ff327db29ae28f26b919a/sharding-jdbc-core-spring-namespace-2.0.3-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.shardingjdbc/sharding-jdbc-core-spring-namespace/2.0.3/bc9e4124857d7778be5ff327db29ae28f26b919a/sharding-jdbc-core-spring-namespace-2.0.3-sources.jar!/" />
+      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.shardingjdbc/sharding-jdbc-core-spring-namespace/2.0.3/bc9e4124857d7778be5ff327db29ae28f26b919a/sharding-jdbc-core-spring-namespace-2.0.3-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

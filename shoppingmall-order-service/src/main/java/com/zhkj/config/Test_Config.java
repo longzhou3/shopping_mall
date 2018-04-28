@@ -5,7 +5,6 @@ import io.shardingjdbc.core.api.config.ShardingRuleConfiguration;
 import io.shardingjdbc.core.api.config.TableRuleConfiguration;
 import io.shardingjdbc.core.api.config.strategy.InlineShardingStrategyConfiguration;
 import io.shardingjdbc.core.api.config.strategy.ShardingStrategyConfiguration;
-import io.shardingjdbc.core.jdbc.core.datasource.ShardingDataSource;
 import io.shardingjdbc.core.routing.strategy.ShardingStrategy;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
@@ -51,8 +50,7 @@ public class Test_Config {
 //        shardingRuleConfig.getTableRuleConfigs().add(orderTableRuleConfig);
 //        // 获取数据源对象
 //        return ShardingDataSourceFactory.createDataSource(dataSourceMap, shardingRuleConfig, new ConcurrentHashMap(), new Properties());
-     // return  ShardingDataSourceFactory.createDataSource(new File("F:\\代码\\shopping_mall\\shoppingmall-order-service\\src\\main\\resources\\sharding-jdbc\\sharding-jdbc.yml"));
-    return ShardingDataSourceFactory.createDataSource(new File(getClass().getResource("/sharding-jdbc/sharding-jdbc.yml").getFile()));
+      return  ShardingDataSourceFactory.createDataSource(new File("F:\\代码\\shopping_mall\\shoppingmall-order-service\\src\\main\\resources\\sharding-jdbc\\sharding-jdbc.yml"));
     }
 
     @Autowired

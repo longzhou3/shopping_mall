@@ -1,14 +1,12 @@
 package com.zhkj.entity;
 
-import java.math.BigDecimal;
-
 /**
- * Created by lenovo on 2018/4/21.
+ * Created by lenovo on 2018/4/16.
  */
 public class ShoppingcartEntity {
     private int id;
     private Integer commdityNumber;
-    private BigDecimal commdityPrice;
+    private Integer commdityPrice;
     private Integer commdityId;
     private Integer userId;
 
@@ -28,11 +26,11 @@ public class ShoppingcartEntity {
         this.commdityNumber = commdityNumber;
     }
 
-    public BigDecimal getCommdityPrice() {
+    public Integer getCommdityPrice() {
         return commdityPrice;
     }
 
-    public void setCommdityPrice(BigDecimal commdityPrice) {
+    public void setCommdityPrice(Integer commdityPrice) {
         this.commdityPrice = commdityPrice;
     }
 

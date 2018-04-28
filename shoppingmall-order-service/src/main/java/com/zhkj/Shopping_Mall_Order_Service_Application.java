@@ -1,10 +1,6 @@
 package com.zhkj;
 
-import com.zhkj.service.timer.CreateTimer;
-import org.apache.log4j.Logger;
 import org.mybatis.spring.annotation.MapperScan;
-import org.quartz.Scheduler;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
@@ -24,9 +20,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @EnableDiscoveryClient  //去注册中心发现服务
 @EnableRedisHttpSession
 public class Shopping_Mall_Order_Service_Application {
-
     public static void main(String[] args) {
-
      SpringApplication.run(Shopping_Mall_Order_Service_Application.class,args);
     }
 }

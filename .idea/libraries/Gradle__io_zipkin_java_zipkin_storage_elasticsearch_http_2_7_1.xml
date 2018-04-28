@@ -1,13 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: io.zipkin.java:zipkin-storage-elasticsearch-http:2.7.1">
     <CLASSES>
-      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-storage-elasticsearch-http/2.7.1/dfd6c9a7e826d44569714040d1ca937f6262529d/zipkin-storage-elasticsearch-http-2.7.1.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-storage-elasticsearch-http/2.7.1/dfd6c9a7e826d44569714040d1ca937f6262529d/zipkin-storage-elasticsearch-http-2.7.1.jar!/" />
+      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.java/zipkin-storage-elasticsearch-http/2.7.1/dfd6c9a7e826d44569714040d1ca937f6262529d/zipkin-storage-elasticsearch-http-2.7.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://F:/gradle仓库/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-storage-elasticsearch-http/2.7.1/6dee871cba66095627e611685b37c06346a96b6c/zipkin-storage-elasticsearch-http-2.7.1-sources.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.zipkin.java/zipkin-storage-elasticsearch-http/2.7.1/6dee871cba66095627e611685b37c06346a96b6c/zipkin-storage-elasticsearch-http-2.7.1-sources.jar!/" />
+      <root url="jar://E:/gradle-4.1/caches/modules-2/files-2.1/io.zipkin.java/zipkin-storage-elasticsearch-http/2.7.1/6dee871cba66095627e611685b37c06346a96b6c/zipkin-storage-elasticsearch-http-2.7.1-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

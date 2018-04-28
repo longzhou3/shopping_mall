@@ -1,16 +1,15 @@
 package com.zhkj.entity;
 
-import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 /**
- * Created by lenovo on 2018/4/21.
+ * Created by lenovo on 2018/4/16.
  */
 public class PromotionitemEntity {
     private int id;
     private Timestamp startTime;
     private Timestamp endTime;
-    private BigDecimal discountPrice;
+    private Integer discountPrice;
     private Integer commodityNumber;
     private Integer commodityId;
 
@@ -38,11 +37,11 @@ public class PromotionitemEntity {
         this.endTime = endTime;
     }
 
-    public BigDecimal getDiscountPrice() {
+    public Integer getDiscountPrice() {
         return discountPrice;
     }
 
-    public void setDiscountPrice(BigDecimal discountPrice) {
+    public void setDiscountPrice(Integer discountPrice) {
         this.discountPrice = discountPrice;
     }
 

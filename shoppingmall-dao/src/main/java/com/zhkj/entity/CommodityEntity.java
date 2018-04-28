@@ -1,14 +1,16 @@
 package com.zhkj.entity;
 
 /**
- * Created by lenovo on 2018/4/21.
+ * Created by lenovo on 2018/4/16.
  */
 public class CommodityEntity {
     private int id;
     private String commodityName;
+    private Integer commodityPrice;
     private String commodityIntroduce;
-    private String bigPictureUrl;
-    private Integer commodityTypeRelationId;
+    private String commodityPictureUrl;
+    private Integer commodityNumber;
+    private Integer commodityTypeId;
 
     public int getId() {
         return id;
@@ -26,6 +28,14 @@ public class CommodityEntity {
         this.commodityName = commodityName;
     }
 
+    public Integer getCommodityPrice() {
+        return commodityPrice;
+    }
+
+    public void setCommodityPrice(Integer commodityPrice) {
+        this.commodityPrice = commodityPrice;
+    }
+
     public String getCommodityIntroduce() {
         return commodityIntroduce;
     }
@@ -34,20 +44,28 @@ public class CommodityEntity {
         this.commodityIntroduce = commodityIntroduce;
     }
 
-    public String getBigPictureUrl() {
-        return bigPictureUrl;
+    public String getCommodityPictureUrl() {
+        return commodityPictureUrl;
     }
 
-    public void setBigPictureUrl(String bigPictureUrl) {
-        this.bigPictureUrl = bigPictureUrl;
+    public void setCommodityPictureUrl(String commodityPictureUrl) {
+        this.commodityPictureUrl = commodityPictureUrl;
     }
 
-    public Integer getCommodityTypeRelationId() {
-        return commodityTypeRelationId;
+    public Integer getCommodityNumber() {
+        return commodityNumber;
     }
 
-    public void setCommodityTypeRelationId(Integer commodityTypeRelationId) {
-        this.commodityTypeRelationId = commodityTypeRelationId;
+    public void setCommodityNumber(Integer commodityNumber) {
+        this.commodityNumber = commodityNumber;
+    }
+
+    public Integer getCommodityTypeId() {
+        return commodityTypeId;
+    }
+
+    public void setCommodityTypeId(Integer commodityTypeId) {
+        this.commodityTypeId = commodityTypeId;
     }
 
     @Override
@@ -60,11 +78,15 @@ public class CommodityEntity {
         if (id != that.id) return false;
         if (commodityName != null ? !commodityName.equals(that.commodityName) : that.commodityName != null)
             return false;
+        if (commodityPrice != null ? !commodityPrice.equals(that.commodityPrice) : that.commodityPrice != null)
+            return false;
         if (commodityIntroduce != null ? !commodityIntroduce.equals(that.commodityIntroduce) : that.commodityIntroduce != null)
             return false;
-        if (bigPictureUrl != null ? !bigPictureUrl.equals(that.bigPictureUrl) : that.bigPictureUrl != null)
+        if (commodityPictureUrl != null ? !commodityPictureUrl.equals(that.commodityPictureUrl) : that.commodityPictureUrl != null)
             return false;
-        if (commodityTypeRelationId != null ? !commodityTypeRelationId.equals(that.commodityTypeRelationId) : that.commodityTypeRelationId != null)
+        if (commodityNumber != null ? !commodityNumber.equals(that.commodityNumber) : that.commodityNumber != null)
+            return false;
+        if (commodityTypeId != null ? !commodityTypeId.equals(that.commodityTypeId) : that.commodityTypeId != null)
             return false;
 
         return true;
@@ -74,9 +96,11 @@ public class CommodityEntity {
     public int hashCode() {
         int result = id;
         result = 31 * result + (commodityName != null ? commodityName.hashCode() : 0);
+        result = 31 * result + (commodityPrice != null ? commodityPrice.hashCode() : 0);
         result = 31 * result + (commodityIntroduce != null ? commodityIntroduce.hashCode() : 0);
-        result = 31 * result + (bigPictureUrl != null ? bigPictureUrl.hashCode() : 0);
-        result = 31 * result + (commodityTypeRelationId != null ? commodityTypeRelationId.hashCode() : 0);
+        result = 31 * result + (commodityPictureUrl != null ? commodityPictureUrl.hashCode() : 0);
+        result = 31 * result + (commodityNumber != null ? commodityNumber.hashCode() : 0);
+        result = 31 * result + (commodityTypeId != null ? commodityTypeId.hashCode() : 0);
         return result;
     }
 }

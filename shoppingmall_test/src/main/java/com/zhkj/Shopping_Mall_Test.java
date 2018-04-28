@@ -23,6 +23,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient  //去注册中心发现服务
 @EnableRedisHttpSession //启动httpsession
 public class Shopping_Mall_Test {
+
     public static void main(String[] args) {
         SpringApplication.run(Shopping_Mall_Test.class,args);
     }

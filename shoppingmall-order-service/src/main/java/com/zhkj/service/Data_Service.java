@@ -1,6 +1,5 @@
 package com.zhkj.service;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.zhkj.api.order_api.Data_Api;
 import com.zhkj.dto.order_dto.Clearing_Dto;
 import com.zhkj.dto.order_dto.Order_Dto;
@@ -12,7 +11,6 @@ import org.springframework.stereotype.Service;
 /**
  * 整合传输
  */
-
 @Service
 public class Data_Service implements Data_Api {
     @Autowired
@@ -25,7 +23,7 @@ public class Data_Service implements Data_Api {
      * @return 返回给前端页面
      */
     @Override
-    public Clearing_Dto transfer_Clearing(Clearing_Vo clearing_vo,String json)  {
+    public Clearing_Dto transfer_Clearing(Clearing_Vo clearing_vo,String json) {
         String private_Key = clearing_vo.getEncrypt_returning().getPrivate_Key();
         String enctypt = clearing_vo.getEncrypt_returning().getEncrypt();
         Boolean boolean_Enctypt = encrypt_service.cipher_Text_Alignment(json, private_Key, enctypt);
@@ -58,7 +56,6 @@ public class Data_Service implements Data_Api {
             order_dto.setPrice(order_vo.getPrice());
             order_dto.setAddress_vo(order_vo.getAddress_vo());
             order_dto.setStatus(1);
-
             order_dto.setEncrypt_returning(order_vo.getEncrypt_returning());
             return order_dto;
         } else {
